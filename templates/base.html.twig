@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta charset="utf-8" />
+	    <meta name="title" content="Legends GG - Estadísticas de League of Legends" />
+	    <meta name="description" content="Las estadísticas de tu clasificación, kda, tier, winrate... Hecho por y para invocadores" />
+	    <meta name="keywords" content="kda, winrate, stats, estadísticas, lol, league of legends, rank, tier" />
+	    <title>{% block title %}Legends GG - Estadísticas de League of Legends{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />
+        <link rel="icon" type="image/png" href="{{ asset('img/icon.png') }}" />
+        {% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
