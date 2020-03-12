@@ -1,3 +1,15 @@
 index:
   path: /
   controller: App\Controller\LegendsGGController::index
+
+tier:
+  path: /tier
+  controller: App\Controller\LegendsGGController::tier
+
+ranking:
+  path: /ranking
+  controller: App\Controller\LegendsGGController::ranking
+
+lol-esports:
+  path: /lol-esports
+  controller: App\Controller\LegendsGGController::lolEsports

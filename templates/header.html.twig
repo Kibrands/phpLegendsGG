@@ -1,0 +1,42 @@
+{# header.html.twig #}
+{% block header %}
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
+	<div class="container">
+        <!-- Brand -->
+        <a style="color:black" class="navbar-brand" href="{{ path('index') }}">
+            <span class="logo"><img src="{{ asset('/img/icon.png') }}"></span>Legends GG
+        </a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('tier') }}">Tier</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('ranking') }}">Ranking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('lol-esports') }}">LoL e-Sports</a>
+            </li> 
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                TFT <img class="tft-logo" src="{{ asset("/img/tft.png") }}">
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Objetos</a>
+                <a class="dropdown-item" href="#">Composiciones</a>
+                <a class="dropdown-item" href="#">Ranking</a>
+            </div>
+            </li>
+            </ul>
+        </div>
+	</div>
+</nav>
+{% endblock %}

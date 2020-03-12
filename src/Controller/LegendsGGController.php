@@ -9,8 +9,13 @@ class LegendsGGController extends AbstractController
     {
         $result = new \stdClass();
         $result->API_KEY = $_ENV['API_KEY'];
+        $active = true;
         return $this->render('base.html.twig', [
-            'result' => $result
+            'active' => $active
         ]);
     }
+
+    function tier(){}
+    function ranking(){}
+    function lolEsports(){}
 }
