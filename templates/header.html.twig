@@ -16,23 +16,23 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('tier') }}">Tier</a>
+                <a class="nav-link {% if active == 'tier' %}active-link{% endif %}" href="{{ path('tier') }}">Tier</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('ranking') }}">Ranking</a>
+                <a class="nav-link {% if active == 'ranking' %}active-link{% endif %}"href="{{ path('ranking') }}">Ranking</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('lol-esports') }}">LoL e-Sports</a>
+                <a class="nav-link {% if active == 'lol-esports' %}active-link{% endif %}" href="{{ path('lol-esports') }}">LoL e-Sports</a>
             </li> 
             <!-- Dropdown -->
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            <a class="nav-link dropdown-toggle {% if active == 'tft' %}active-link{% endif %}" href="#" id="navbardrop" data-toggle="dropdown">
                 TFT <img class="tft-logo" src="{{ asset("/img/tft.png") }}">
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Objetos</a>
-                <a class="dropdown-item" href="#">Composiciones</a>
-                <a class="dropdown-item" href="#">Ranking</a>
+                <a class="dropdown-item" href="{{ path('tft-items') }}">Objetos</a>
+                <a class="dropdown-item" href="{{ path('tft-comps') }}">Composiciones</a>
+                <a class="dropdown-item" href="{{ path('tft-rank') }}">Ranking</a>
             </div>
             </li>
             </ul>

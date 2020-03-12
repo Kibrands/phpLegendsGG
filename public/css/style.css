@@ -33,3 +33,12 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background-color: #383838;
 }
+
+
+/*********************************
+3. Main Container
+*********************************/
+
+.main-container {
+    margin-top: 9rem;
+}

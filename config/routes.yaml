@@ -13,3 +13,15 @@ ranking:
 lol-esports:
   path: /lol-esports
   controller: App\Controller\LegendsGGController::lolEsports
+
+tft-items:
+  path: /tft/items
+  controller: App\Controller\LegendsGGController::tftItems
+
+tft-comps:
+  path: /tft/comps
+  controller: App\Controller\LegendsGGController::tftComps
+
+tft-rank:
+  path: /tft/ranking
+  controller: App\Controller\LegendsGGController::tftRank

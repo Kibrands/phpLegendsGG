@@ -77,6 +77,14 @@ h6 {
     color: #b30000 !important;
 }
 
+.dropdown .active-link {
+    color: #b30000 !important;
+}
+
+.active-link {
+    color: #b30000 !important;
+}
+
 nav {
     -webkit-transition: padding-top .3s, padding-bottom .3s;
     -moz-transition: padding-top .3s, padding-bottom .3s;
