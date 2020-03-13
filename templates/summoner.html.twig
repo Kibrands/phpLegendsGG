@@ -1,0 +1,9 @@
+{# summoner.html.twig #}
+{% extends "base.html.twig" %}
+{% block title %}{{ parent() }}{{ summoner }}{% endblock %}
+{% block body %}
+<div class="container main-container">
+<h4 class="text-center">{{ summoner }} - {{ server }}</h4>
+    ({{ key }})
+</div>
+{% endblock %}

@@ -25,3 +25,12 @@ tft-comps:
 tft-rank:
   path: /tft/ranking
   controller: App\Controller\LegendsGGController::tftRank
+
+find-summoner:
+  path: /summoner
+  controller: App\Controller\LegendsGGController::findSummoner
+  methods: ["POST"]
+
+summoner:
+  path: /summoner/{server}/{summoner}
+  controller: App\Controller\LegendsGGController::summoner

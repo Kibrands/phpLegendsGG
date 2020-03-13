@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 
 class LegendsGGController extends AbstractController
 {
@@ -53,6 +54,23 @@ class LegendsGGController extends AbstractController
     {
         return $this->render('tft/tft-rank.html.twig', [
             'active' => 'tft'
+        ]);
+    }
+
+    function findSummoner(\Request $request)
+    {
+        $summoner = $request->request->get("summonerName");
+        $server = $request->request->get("server");
+        return $this->render();
+    }
+
+    function summoner($server, $summoner)
+    {
+        return $this->render('summoner.html.twig', [
+            'active' => '',
+            'server' => $server,
+            'summoner' => $summoner,
+            'key' => $_ENV['API_KEY']
         ]);
     }
 }
