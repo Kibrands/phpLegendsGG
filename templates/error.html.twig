@@ -1,0 +1,17 @@
+{# error.html.twig #}
+{% extends "base.html.twig" %}
+{% block title %}
+{{ parent() }}{{ error }}
+{% endblock %}
+{% block body %}
+<div class="container main-container text-center">
+    <div class="display-2 text-danger">
+        <i class="fas fa-times"></i> ERROR: {{ error }}
+    </div>
+    <div class="mt-5">
+        <button class="btn btn-success" onclick="window.location.href='{{ path('index') }}'">
+            <span class="h4"><i class="fas fa-check"></i> Volver al inicio</span>
+        </button>
+    </div>
+</div>
+{% endblock %}

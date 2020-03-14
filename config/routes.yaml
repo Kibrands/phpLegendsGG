@@ -34,3 +34,11 @@ find-summoner:
 summoner:
   path: /summoner/{server}/{summoner}
   controller: App\Controller\LegendsGGController::summoner
+
+error:
+  path: /error/{error}
+  controller: App\Controller\LegendsGGController::error
+
+only-error:
+  path: /error
+  controller: App\Controller\LegendsGGController::onlyError

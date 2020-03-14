@@ -7,16 +7,16 @@
     <form id="findSummoner" action="{{ path('find-summoner') }}" method="post">
         <div class="row w-50 mx-auto">
             <div class="col-xs-12 col-md-9">
-                <input class="form-control" type="text" id="summonerName" required placeholder="Nombre de invocador">
+                <input class="form-control" type="text" name="summonerName" id="summonerName" required placeholder="Nombre de invocador">
             </div>
             <div class="col-xs-12 col-md-3">
-                <select id="server" class="form-control" id="server">
+                <select id="server" class="form-control" name="server" id="server">
                     <option value="na" selected>NA</option>
                     <option value="euw">EUW</option>
                     <option value="eun">EUN</option>
                     <option value="br">Brazil</option>
-                    <option value="las">LAN</option>
-                    <option value="lan">LAS</option>
+                    <option value="lan">LAN</option>
+                    <option value="las">LAS</option>
                     <option value="tr">Turkey</option>
                     <option value="ru">Russia</option>
                     <option value="oc">Oceania</option>
