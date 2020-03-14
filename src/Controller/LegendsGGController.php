@@ -58,12 +58,20 @@ class LegendsGGController extends AbstractController
         ]);
     }
 
-    function findSummoner(Request $request, LoggerInterface $logger)
+    function findSummoner(Request $request)
     {
         // Recogemos valores del formulario
-        $restController = new RestController();
         $summoner = $request->request->get("summonerName");
         $server = $request->request->get("server");
+        return $this->redirectToRoute('summoner', [
+            'server' => $server,
+            'summoner' => $summoner
+        ]);
+    }
+
+    function summoner($server, $summoner)
+    {
+        $restController = new RestController();
         // Los tratamos con restController->getSummoner()
         $summonerObj = $restController->getSummoner($server, $summoner);
         // Si hay algún error, lo controlamos
@@ -76,19 +84,10 @@ class LegendsGGController extends AbstractController
             }
         }
         // Retorna al summoner
-        $logger->info($summonerObj->getName());
-        return $this->redirectToRoute('summoner', [
-            'server' => $server,
-            'summoner' => $summonerObj
-        ]);
-    }
-
-    function summoner($server, $summoner)
-    {
         return $this->render('summoner.html.twig', [
             'active' => '',
             'server' => $server,
-            'summoner' => $summoner
+            'summoner' => $summonerObj
         ]);
     }
 

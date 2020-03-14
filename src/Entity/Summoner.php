@@ -20,7 +20,7 @@ class Summoner
         $this->profileIconId = $profileIconId;
     }
 
-    public function getProfileIconId() : integer
+    public function getProfileIconId() : int
     {
         return $this->profileIconId;
     }
@@ -50,7 +50,7 @@ class Summoner
         $this->summonerLevel = $summonerLevel;
     }
 
-    public function getSummonerLevel() : integer
+    public function getSummonerLevel() : int
     {
         return $this->summonerLevel;
     }
