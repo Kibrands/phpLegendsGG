@@ -58,11 +58,12 @@ class LegendsGGController extends AbstractController
         ]);
     }
 
-    function findSummoner(Request $request)
+    function findSummoner(Request $request, LoggerInterface $logger)
     {
         // Recogemos valores del formulario
         $summoner = $request->request->get("summonerName");
         $server = $request->request->get("server");
+        $logger.debug($summoner . " - " . $server);
         return $this->redirectToRoute('summoner', [
             'server' => $server,
             'summoner' => $summoner
