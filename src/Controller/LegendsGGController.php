@@ -83,11 +83,35 @@ class LegendsGGController extends AbstractController
               ));
             }
         }
+        // Borde
+        $ranges = array(
+            "1_29" => range(1, 29),
+            "30_49" => range(30, 49),
+            "50_74" => range(50, 74),
+            "75_99" => range(75, 99),
+            "100_124" => range(100, 124),
+            "125_149" => range(125, 149),
+            "150_174" => range(150, 174),
+            "175_199" => range(175, 199),
+            "200_224" => range(200, 224),
+            "225_249" => range(225, 249),
+            "250_299" => range(250, 299),
+        );
+        $levelBorder = "1_29";
+        foreach ($ranges as $key => $value) {
+            if (in_array($summonerObj->getSummonerLevel(), $value)) {
+                $levelBorder = $key;
+            } elseif ($summonerObj->getSummonerLevel() >= 300) {
+                $levelBorder = "300";
+            }
+        }
         // Retorna al summoner
         return $this->render('summoner.html.twig', [
             'active' => '',
             'server' => $server,
-            'summoner' => $summonerObj
+            'summoner' => $summonerObj,
+            'lol_patch' => $_ENV['LOL_PATCH'],
+            'levelBorder' => $levelBorder
         ]);
     }
 

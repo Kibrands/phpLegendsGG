@@ -42,3 +42,13 @@ body::-webkit-scrollbar-thumb:hover {
 .main-container {
     margin-top: 9rem;
 }
+
+
+/*********************************
+4. Profile Icon & Border
+*********************************/
+
+.icon-border {
+    margin-top: -107px;
+    width: 82%!important;
+}
