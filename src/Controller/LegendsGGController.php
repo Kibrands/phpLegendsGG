@@ -63,7 +63,7 @@ class LegendsGGController extends AbstractController
         // Recogemos valores del formulario
         $summoner = $request->request->get("summonerName");
         $server = $request->request->get("server");
-        $logger.info($summoner . " - " . $server);
+        $logger->info($summoner . " - " . $server);
         return $this->redirectToRoute('summoner', [
             'server' => $server,
             'summoner' => $summoner
