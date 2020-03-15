@@ -15,7 +15,7 @@ class RestController
             return 'err-server-not-valid';
         }
         // URL API Y OPCIONES
-        $url = "https://".$serverObj->getServer().".api.riotgames.com/lol/summoner/v4/summoners/by-name/".$summonerName;
+        $url = "https://" . $serverObj->getServer() . ".api.riotgames.com/lol/summoner/v4/summoners/by-name/" . \str_replace(" ", "%20", $summonerName);
         $opciones = array('http' =>
             array(
                 'method'  => 'GET',

@@ -4,7 +4,6 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use App\Controller\RestController;
-use Psr\Log\LoggerInterface;
 use App\Entity\Summoner;
 
 class LegendsGGController extends AbstractController
@@ -58,12 +57,11 @@ class LegendsGGController extends AbstractController
         ]);
     }
 
-    function findSummoner(Request $request, LoggerInterface $logger)
+    function findSummoner(Request $request)
     {
         // Recogemos valores del formulario
         $summoner = $request->request->get("summonerName");
         $server = $request->request->get("server");
-        $logger->info($summoner . " - " . $server);
         return $this->redirectToRoute('summoner', [
             'server' => $server,
             'summoner' => $summoner
