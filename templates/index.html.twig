@@ -2,7 +2,7 @@
 {% extends "base.html.twig" %}
 {% block title %}{{ parent() }}Estadísticas de League of Legends{% endblock %}
 {% block body %}
-<div class="container main-container">
+<div class="container-fluid main-container">
 <h4 class="text-center">Búsqueda de Invocadores</h4>
     <form id="findSummoner" action="{{ path('find-summoner') }}" method="post">
         <div class="row w-50 mx-auto">

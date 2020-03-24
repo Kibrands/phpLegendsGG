@@ -76,7 +76,8 @@ class LegendsGGController extends AbstractController
         // Si hay algún error, lo controlamos
         if (is_string($summonerObj)) {
             if ($summonerObj == 'err-server-not-valid'
-              || $summonerObj == 'err-summoner-not-found') {
+              || $summonerObj == 'err-summoner-not-found'
+              || $summonerObj == 'err-api-key') {
               return $this->redirectToRoute('error', array(
                   'error' => $summonerObj
               ));
@@ -98,6 +99,7 @@ class LegendsGGController extends AbstractController
         );
         $levelBorder = "1_29";
         foreach ($ranges as $key => $value) {
+            echo $summonerObj;
             if (in_array($summonerObj->getSummonerLevel(), $value)) {
                 $levelBorder = $key;
             } elseif ($summonerObj->getSummonerLevel() >= 300) {
