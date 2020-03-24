@@ -110,6 +110,7 @@ class LegendsGGController extends AbstractController
             'server' => $server,
             'summoner' => $summonerObj,
             'lol_patch' => $_ENV['LOL_PATCH'],
+            'ddragon' => $_ENV['DDRAGON'],
             'levelBorder' => $levelBorder
         ]);
     }
@@ -123,6 +124,9 @@ class LegendsGGController extends AbstractController
         }
         if ($error == 'err-summoner-not-found') {
             $errorResponse = 'El invocador no existe';
+        }
+        if ($error == 'err-api-key') {
+            $errorResponse = 'La Api Key ha caducado, por favor, contacte con el dueño de la página';
         }
         return $this->render('error.html.twig', array(
             'error' => $errorResponse,

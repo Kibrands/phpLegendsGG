@@ -48,7 +48,31 @@ body::-webkit-scrollbar-thumb:hover {
 4. Profile Icon & Border
 *********************************/
 
+.profile-icon {
+    position: relative;
+    display: block;
+}
+
 .icon-border {
-    margin-top: -107px;
-    width: 82%!important;
+    width: 62%!important;
+    left: 3.9vw;
+    top: 0.7vh;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: -25px;
+}
+
+@media all and (max-width: 992px) {
+    .icon-border {
+        left: 3.7vw;
+        top: 1vh;
+    }
+}
+
+@media all and (max-width: 778px) {
+    .icon-border {
+        width: 74%!important;
+        left: 13.7vw;
+        top: -5vh;
+    }
 }

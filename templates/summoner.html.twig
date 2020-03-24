@@ -7,13 +7,15 @@
         <div class="col-12 border border-dark shadow bg-light">
             <div class="row pb-3 pt-4">
                 <div class="col-xs-6 col-md-2 text-center">
-                    <img src="http://ddragon.leagueoflegends.com/cdn/{{ lol_patch }}/img/profileicon/{{ summoner.profileIconId }}.png"
-                        class="img img-fluid rounded rounded-circle w-50"
-                        alt="{{ summoner.profileIconId }}">
-                    <img src="{{ asset('img/level/' ~ levelBorder ~ '.png') }}"
-                        class="img img-fluid icon-border"
-                        alt="{{ levelBorder }}">
-                    <span>{{ summoner.summonerLevel }}</span>
+                    <div class="icon-container">
+                        <img src="{{ ddragon }}}{{ lol_patch }}/img/profileicon/{{ summoner.profileIconId }}.png"
+                            class="img img-fluid rounded rounded-circle w-50 profile-icon"
+                            alt="{{ summoner.profileIconId }}">
+                        <img src="{{ asset('img/level/' ~ levelBorder ~ '.png') }}"
+                            class="img img-fluid icon-border"
+                            alt="{{ levelBorder }}"><br/>
+                        <span>{{ summoner.summonerLevel }}</span>
+                    </div>
                 </div>
                 <div class="col-xs-6 col-md-10">
                     <b>{{ summoner.name }}</b><br/>

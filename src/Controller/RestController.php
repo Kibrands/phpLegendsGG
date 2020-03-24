@@ -30,6 +30,8 @@ class RestController
         if (isset($json->status)) { // Si el código es 404, retorna error
             if ($json->status->status_code == 404) {
                 return 'err-summoner-not-found';
+            } elseif ($json->status->status_code == 403) {
+                return 'err-api-key';
             }
         }
         // Creación objeto Summoner
