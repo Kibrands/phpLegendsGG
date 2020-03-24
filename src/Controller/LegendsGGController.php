@@ -99,7 +99,6 @@ class LegendsGGController extends AbstractController
         );
         $levelBorder = "1_29";
         foreach ($ranges as $key => $value) {
-            echo $summonerObj;
             if (in_array($summonerObj->getSummonerLevel(), $value)) {
                 $levelBorder = $key;
             } elseif ($summonerObj->getSummonerLevel() >= 300) {
