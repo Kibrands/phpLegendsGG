@@ -42,3 +42,12 @@ error:
 only-error:
   path: /error
   controller: App\Controller\LegendsGGController::onlyError
+
+subscription:
+  path: /subscription
+  controller: App\Controller\SubscriptionController::subscription
+  methods: ["POST"]
+
+confirm-subscription:
+  path: /confirm/{email}/{id}
+  controller: App\Controller\SubscriptionController::confirmSubscription

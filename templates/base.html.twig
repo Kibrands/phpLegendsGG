@@ -16,6 +16,7 @@
         {% endblock %}
     </head>
     <body>
+        <div class="pace"></div>
         <header class="header">
         {% include 'header.html.twig' with {'active': active} %}
         </header>
@@ -32,8 +33,9 @@
         <script src="{{ asset('vendors/bootstrap-4.4.0-dist/js/popper.js') }}"></script>
         <script src="{{ asset('vendors/bootstrap-4.4.0-dist/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('vendors/fontawesome-5.12.1/js/all.js') }}"></script>
+        <script src="{{ asset('js/pace.js') }}"><script>
         <script>
-        	$(document).on("scroll", function() {
+            $(document).on("scroll", function() {
                 if ($(document).scrollTop() > 86) {
                     $("#banner").addClass("shrink");
                 } else {

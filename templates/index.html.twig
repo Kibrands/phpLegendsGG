@@ -2,34 +2,51 @@
 {% extends "base.html.twig" %}
 {% block title %}{{ parent() }}Estadísticas de League of Legends{% endblock %}
 {% block body %}
-<div class="container-fluid main-container">
-<h4 class="text-center">Búsqueda de Invocadores</h4>
-    <form id="findSummoner" action="{{ path('find-summoner') }}" method="post">
-        <div class="row w-50 mx-auto">
-            <div class="col-xs-12 col-md-9">
-                <input class="form-control" type="text" name="summonerName" id="summonerName" required placeholder="Nombre de invocador">
+    <div class="container-fluid main-container">
+        <h4 class="text-center">Búsqueda de Invocadores</h4>
+        <form id="findSummoner" action="{{ path('find-summoner') }}" method="post">
+            <div class="row w-50 mx-auto">
+                <div class="col-xs-12 col-md-9">
+                    <input class="form-control" type="text" name="summonerName" id="summonerName" required placeholder="Nombre de invocador">
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <select id="server" class="form-control" name="server" id="server">
+                        <option value="na" selected>NA</option>
+                        <option value="euw">EUW</option>
+                        <option value="eun">EUN</option>
+                        <option value="br">Brazil</option>
+                        <option value="lan">LAN</option>
+                        <option value="las">LAS</option>
+                        <option value="tr">Turkey</option>
+                        <option value="ru">Russia</option>
+                        <option value="oc">Oceania</option>
+                        <option value="jp">Japan</option>
+                        <option value="kr">Korea</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-xs-12 col-md-3">
-                <select id="server" class="form-control" name="server" id="server">
-                    <option value="na" selected>NA</option>
-                    <option value="euw">EUW</option>
-                    <option value="eun">EUN</option>
-                    <option value="br">Brazil</option>
-                    <option value="lan">LAN</option>
-                    <option value="las">LAS</option>
-                    <option value="tr">Turkey</option>
-                    <option value="ru">Russia</option>
-                    <option value="oc">Oceania</option>
-                    <option value="jp">Japan</option>
-                    <option value="kr">Korea</option>
-                </select>
+            <div class="row text-center w-50 mx-auto">
+                <div class="col-12 mt-2">
+                    <button type="submit" class="btn btn-dark btn-block"><i class="fas fa-search"></i> Buscar</button>
+                </div>
+            </div>
+        </form>
+        <div class="w-50 mx-auto mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <h5 class="text-center mx-auto">Suscríbete a nuestro boletín para estar a la última</h5>
+                </div>
+                <div class="col-12">
+                    <form id="subscriptionForm" action="{{ path('subscription') }}" method="post">
+                        <input id="subEmail" name="subEmail" type="email" placeholder="email@example.com" required class="form-control" >
+                        <div class="row text-center w-50 mx-auto">
+                            <div class="col-12 mt-2">
+                                <button type="submit" class="btn btn-dark btn-block">¡¡Suscríbeme!!</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="row text-center w-50 mx-auto">
-            <div class="col-12 mt-2">
-                <button type="submit" class="btn btn-dark btn-block"><i class="fas fa-search"></i> Buscar</button>
-            </div>
-        </div>
-    </form>
-</div>
+    </div>
 {% endblock %}

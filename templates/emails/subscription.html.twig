@@ -1,0 +1,18 @@
+{# emails/subscription.html.twig #}
+<div style="font-family: sans-serif; width: 80%; margin: 0 auto; text-align: center;">
+    <div style="align-items: center; display: inline-flex;">
+        <img width="120" src="{{ absolute_url(asset('img/icon.png')) }}">
+        <h2 style="font-size: 2rem">Legends GG<h2>
+    </div>
+    <div style="margin: 0 auto; text-align: left">
+        <h4>Confirma tu registro en el boletín</h4>
+        <p>
+            Gracias por suscribirte a nuestro boletín, para finalizar, solo necesitas confirmar tu registro haciendo click en el siguiente botón:
+        </p>
+    </div>
+    <br />
+    <div style="margin: 0 auto">
+        <a style="padding: 15px 20px; background-color: #212529; color: white; border-radius: 10px; text-decoration: none"
+           href="{{ path('confirm-subscription', {email: email, id: emailId}) }}" target="_blank" >Confirmar suscripción</a>
+    </div>
+</div>

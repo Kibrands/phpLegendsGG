@@ -1,0 +1,13 @@
+{# subscription/confirmed.html.twig #}
+{% extends "base.html.twig" %}
+{% block title %}
+    {{ parent() }}{% if icon == "check" %}Suscripción correcta{% else %}Error{% endif %}
+{% endblock %}
+{% block body %}
+    <div class="container main-container text-center">
+        <h2 class="{% if icon == "check" %}text-success{% else %}text-danger{% endif %}">
+            <i class="fas fa-{{ icon }}"></i>
+            {{ message }}
+        </h2>
+    </div>
+{% endblock %}
