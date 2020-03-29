@@ -13,6 +13,7 @@
     <br />
     <div style="margin: 0 auto">
         <a style="padding: 15px 20px; background-color: #212529; color: white; border-radius: 10px; text-decoration: none"
-           href="{{ path('confirm-subscription', {email: email, id: emailId}) }}" target="_blank" >Confirmar suscripción</a>
+           href="{{ absolute_url(path('confirm-subscription', {email: email, id: emailId})) }}" target="_blank" >Confirmar suscripción</a>
     </div>
+    <br/>
 </div>

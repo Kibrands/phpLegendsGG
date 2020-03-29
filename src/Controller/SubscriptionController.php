@@ -14,7 +14,7 @@ class SubscriptionController extends AbstractController {
             return $this->redirectToRoute('onlyError');
         }
         $message = (new \Swift_Message('Confirmación de suscripción a Legends GG'))
-                ->setFrom('legendsgg@mail.com')
+                ->setFrom('info.legendsgg@gmail.com')
                 ->setTo($email)
                 ->setBody(
                 $this->renderView(
