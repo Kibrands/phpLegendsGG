@@ -189,7 +189,7 @@ footer div a:hover {
 }
 
 .footer, .push {
-    height: 50px;
+    height: 60px;
 }
 
 
@@ -201,6 +201,24 @@ footer div a:hover {
   position: relative;
   width: 190px;
   margin: 0 auto;
+}
+
+@media all and (max-width:321px) {
+	.link_wrapper {
+		margin-left: -40%;
+	}
+}
+
+@media all and (min-width: 321px) and (max-width:376px) {
+	.link_wrapper {
+		margin-left: -20%;
+	}
+}
+
+@media all and (min-width: 376px) and (max-width:426px) {
+	.link_wrapper {
+		margin-left: -8%;
+	}
 }
 
 .search-button{
