@@ -27,7 +27,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
     background-color: #636363;
-    border-radius: 20px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
@@ -40,7 +39,8 @@ body::-webkit-scrollbar-thumb:hover {
 *********************************/
 
 .main-container {
-    margin-top: 9rem;
+    margin-top: 5rem;
+    padding: 0 !important;
 }
 
 
@@ -157,4 +157,98 @@ body::-webkit-scrollbar-thumb:hover {
 @keyframes pace-spinner {
     0% { transform: rotate(0deg); transform: rotate(0deg); }
     100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+
+/*********************************
+6. Footer
+*********************************/
+
+footer {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    background: rgba(191,13,0,1);
+    background: -moz-linear-gradient(top, rgba(191,13,0,1) 0%, rgba(66,1,1,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(191,13,0,1)), color-stop(100%, rgba(66,1,1,1)));
+    background: -webkit-linear-gradient(top, rgba(191,13,0,1) 0%, rgba(66,1,1,1) 100%);
+    background: -o-linear-gradient(top, rgba(191,13,0,1) 0%, rgba(66,1,1,1) 100%);
+    background: -ms-linear-gradient(top, rgba(191,13,0,1) 0%, rgba(66,1,1,1) 100%);
+    background: linear-gradient(to bottom, rgba(191,13,0,1) 0%, rgba(66,1,1,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf0d00', endColorstr='#420101', GradientType=0 );
+}
+
+footer div a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+footer div a:hover {
+    color: #939393;
+    text-decoration: none;
+}
+
+.footer, .push {
+    height: 50px;
+}
+
+
+/*********************************
+7. Custom Button
+*********************************/
+
+.link_wrapper{
+  position: relative;
+  width: 190px;
+  margin: 0 auto;
+}
+
+.search-button{
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+}
+
+.icon svg{
+  width: 30px !important;
+  position: absolute;
+  top: calc(65% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: rgba(191,13,0,1);
+  transition: all .35s;
+}
+
+.search-button:hover{
+  width: 200px;
+  border: 3px solid rgba(191,13,0,1);
+  background: transparent;
+  color: rgba(191,13,0,1);
+}
+
+.search-button:hover + .icon{
+  border: 3px solid rgba(191,13,0,1);
+  right: -25%;
 }

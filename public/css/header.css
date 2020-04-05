@@ -155,7 +155,7 @@ nav {
 
 @media (max-width:500px) {
     .navbar-nav {
-        background-color: #000;
+        background-color: #fff;
         border-top: 3px solid #b30000;
         color: #000;
         z-index: 1;
@@ -191,5 +191,18 @@ nav {
         font-weight: 200;
         line-height: 23px;
         margin-bottom: 40px;
+    }
+    .navbar {
+        background-color: #fff;
+    }
+    .navbar-toggler {
+        filter: invert(1);
+    }
+    .navbar-collapse ul li {
+        border-left: 1px solid #6c6c6f;
+        border-right: 1px solid #6c6c6f;
+    }
+    .navbar-collapse ul li:last-child {
+        border-bottom: 1px solid #6c6c6f;
     }
 }
