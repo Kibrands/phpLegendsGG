@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Server;
 use App\Entity\Summoner;
+use App\Entity\MatchList;
 
 class RestController {
 
@@ -76,5 +77,42 @@ class RestController {
         }
         // Retornamos array
         return $json;
+    }
+    
+    function getMatchesByAccountId($server, $accountId) {
+        // Creación objeto Server
+        $serverObj = new Server();
+        $serverObj->setServer($server);
+        if ($serverObj->getServer() == 'err') { // Si no es válido, retorna error
+            return 'err-server-not-valid';
+        }
+        // URL API Y OPCIONES
+        $url = "https://" . $serverObj->getServer() . ".api.riotgames.com/lol/match/v4/matchlists/by-account/" . $accountId;
+        $opciones = array('http' =>
+            array(
+                'method' => 'GET',
+                'header' => 'X-Riot-Token: ' . $_ENV['API_KEY'],
+                "ignore_errors" => true,
+            )
+        );
+        $contexto = stream_context_create($opciones);
+        // Coge datos de la API
+        $resultado = file_get_contents($url, false, $contexto);
+        $json = \json_decode($resultado);
+        if (isset($json->status)) { // Si el código es 404, retorna error
+            if ($json->status->status_code == 404) {
+                return 'err-no-matches-were-found';
+            } elseif ($json->status->status_code == 403) {
+                return 'err-api-key';
+            }
+        }
+        // Creación objeto MatchList
+        $matchList = new MatchList();
+        $matchList->setMatches($json->matches);
+        $matchList->setStartIndex($json->startIndex);
+        $matchList->setEndIndex($json->endIndex);
+        $matchList->setTotalGames($json->totalGames);
+        // Retornamos MatchList
+        return $matchList;
     }
 }

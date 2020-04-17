@@ -46,6 +46,24 @@
                     <i class="fas fa-wrench"></i> Estamos trabajando duro para traerte las mejores estadísticas.
                 </div>
             </div>
+            {% for match in matches.matches %}
+                <div class="col-12 border border-dark shadow bg-light mt-5">
+                    <div class="py-3 h4 text-center">
+                        {{ match.gameId }} - {{ render(controller(
+                                'App\\Controller\\ChampionController::getChampionByKey',
+                                { 'key': match.champion }
+                            )) }}<br/>
+                        {{ match.timestamp }} - {{ match.lane }}
+                    </div>
+                </div>
+            {% else %}
+                <div class="col-12 border border-dark shadow bg-light mt-5">
+                    <div class="text-danger py-3 h4 text-center">
+                        No existen partidas.
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
+    <div class="push mx-4"/>
 {% endblock %}

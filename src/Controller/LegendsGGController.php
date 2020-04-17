@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -6,81 +7,70 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Controller\RestController;
 use App\Entity\Summoner;
 
-class LegendsGGController extends AbstractController
-{
-    function index()
-    {
+class LegendsGGController extends AbstractController {
+
+    function index() {
         return $this->render('index.html.twig', [
-            'active' => 'index'
+                    'active' => 'index'
         ]);
     }
 
-    function tier()
-    {
+    function tier() {
         return $this->render('tier.html.twig', [
-            'active' => 'tier'
+                    'active' => 'tier'
         ]);
     }
 
-    function ranking()
-    {
+    function ranking() {
         return $this->render('ranking.html.twig', [
-            'active' => 'ranking'
+                    'active' => 'ranking'
         ]);
     }
 
-    function lolEsports()
-    {
+    function lolEsports() {
         return $this->render('lol-esports.html.twig', [
-            'active' => 'lol-esports'
+                    'active' => 'lol-esports'
         ]);
     }
 
-    function tftItems()
-    {
+    function tftItems() {
         return $this->render('tft/tft-items.html.twig', [
-            'active' => 'tft'
+                    'active' => 'tft'
         ]);
     }
 
-    function tftComps()
-    {
+    function tftComps() {
         return $this->render('tft/tft-comps.html.twig', [
-            'active' => 'tft'
+                    'active' => 'tft'
         ]);
     }
 
-    function tftRank()
-    {
+    function tftRank() {
         return $this->render('tft/tft-rank.html.twig', [
-            'active' => 'tft'
+                    'active' => 'tft'
         ]);
     }
 
-    function findSummoner(Request $request)
-    {
+    function findSummoner(Request $request) {
         // Recogemos valores del formulario
         $summoner = $request->request->get("summonerName");
         $server = $request->request->get("server");
         return $this->redirectToRoute('summoner', [
-            'server' => $server,
-            'summoner' => $summoner
+                    'server' => $server,
+                    'summoner' => $summoner
         ]);
     }
 
-    function summoner($server, $summoner)
-    {
+    function summoner($server, $summoner) {
         $restController = new RestController();
         // Los tratamos con restController->getSummoner()
         $summonerObj = $restController->getSummoner($server, $summoner);
         // Si hay algún error, lo controlamos
         if (is_string($summonerObj)) {
-            if ($summonerObj == 'err-server-not-valid'
-              || $summonerObj == 'err-summoner-not-found'
-              || $summonerObj == 'err-api-key') {
-              return $this->redirectToRoute('error', array(
-                  'error' => $summonerObj
-              ));
+            if ($summonerObj == 'err-server-not-valid' || $summonerObj == 'err-summoner-not-found' || $summonerObj == 'err-api-key') {
+                return $this->redirectToRoute('error', array(
+                            'error' => $summonerObj
+                ));
             }
         }
         // Borde
@@ -108,28 +98,38 @@ class LegendsGGController extends AbstractController
         // Busca ligas
         $summonerLeagues = $restController->getSummonerLeagues($server, $summonerObj->getId());
         if (is_string($summonerLeagues)) {
-            if ($summonerLeagues == 'err-server-not-valid'
-              || $summonerLeagues == 'err-summoner-leagues-not-found'
-              || $summonerLeagues == 'err-api-key') {
-              return $this->redirectToRoute('error', array(
-                  'error' => $summonerLeagues
-              ));
+            if ($summonerLeagues == 'err-server-not-valid' || $summonerLeagues == 'err-summoner-leagues-not-found' || $summonerLeagues == 'err-api-key') {
+                return $this->redirectToRoute('error', array(
+                            'error' => $summonerLeagues
+                ));
             }
+        }
+        // Busca partidas
+        $matches = $restController->getMatchesByAccountId($server, $summonerObj->getAccountId());
+        if (is_string($summonerLeagues)) {
+            if ($summonerLeagues == 'err-server-not-valid' || $summonerLeagues == 'err-no-matches-were-found' || $summonerLeagues == 'err-api-key') {
+                return $this->redirectToRoute('error', array(
+                            'error' => $summonerLeagues
+                ));
+            }
+        }
+        if ($matches->getTotalGames() > 30) {
+            $matches->setMatches(array_slice($matches->getMatches(), 0, 30));
         }
         // Retorna al summoner
         return $this->render('summoner.html.twig', [
-            'active' => '',
-            'server' => $server,
-            'summoner' => $summonerObj,
-            'lol_patch' => $_ENV['LOL_PATCH'],
-            'ddragon' => $_ENV['DDRAGON'],
-            'levelBorder' => $levelBorder,
-            'summonerLeagues' => $summonerLeagues
+                    'active' => '',
+                    'server' => $server,
+                    'summoner' => $summonerObj,
+                    'lol_patch' => $_ENV['LOL_PATCH'],
+                    'ddragon' => $_ENV['DDRAGON'],
+                    'levelBorder' => $levelBorder,
+                    'summonerLeagues' => $summonerLeagues,
+                    'matches' => $matches
         ]);
     }
 
-    function error($error)
-    {
+    function error($error) {
         // Error por defecto
         $errorResponse = "Aquí no hay nada";
         if ($error == 'err-server-not-valid') {
@@ -142,16 +142,16 @@ class LegendsGGController extends AbstractController
             $errorResponse = 'La Api Key ha caducado, por favor, contacte con el dueño de la página';
         }
         return $this->render('error.html.twig', array(
-            'error' => $errorResponse,
-            'active' => 'error'
+                    'error' => $errorResponse,
+                    'active' => 'error'
         ));
     }
 
-    function onlyError()
-    {
+    function onlyError() {
         // Redirección para la página de error
         return $this->redirectToRoute('error', array(
-            'error' => 'error'
+                    'error' => 'error'
         ));
     }
+
 }
