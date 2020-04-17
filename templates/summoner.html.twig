@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12 border border-dark shadow bg-light">
                 <div class="row pb-3 pt-4">
-                    <div class="col-xs-6 col-md-2 text-left">
+                    <div class="col-xs-6 col-md-2 text-left" style="align-self: center;margin-left: 5%;">
                         <div class="icon-container">
                             <img src="{{ ddragon }}{{ lol_patch }}/img/profileicon/{{ summoner.profileIconId }}.png"
                                  class="img img-fluid rounded rounded-circle w-50 profile-icon"
@@ -18,9 +18,27 @@
                             <br/>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-md-10">
+                    <div class="col-xs-6 col-md-2">
                         <b>{{ summoner.name }}</b><br/>
                     </div>
+                    {% for league in summonerLeagues %}
+                        <div class="col-xs-6 col-md-2 text-center">
+                            {% if league.queueType == 'RANKED_SOLO_5x5' %}
+                                <b>Ranked Solo/Duo</b><br/>
+                            {% elseif league.queueType == 'RANKED_FLEX_SR' %}
+                                <b>Ranked Flex</b><br/>
+                            {% endif %}
+                            <img src="{{ asset('img/ranked-emblems/Emblem_' ~ league.tier|capitalize ~ '.png') }}"
+                                 width="120px">
+                            <b>{{ league.tier }} - {{ league.rank }}</b><br/>
+                            <b>{{ league.leaguePoints }} LP</b><br/>
+                        </div>
+                    {% else %}
+                        <div class="col-xs-6 col-md-2 text-center">
+                            <b>Unranked</b>
+                            <img width="120px" src="{{ asset('img/ranked-emblems/Emblem_Unranked.png') }}" alt="Unranked">
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="col-12 border border-dark shadow bg-light mt-5">

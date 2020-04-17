@@ -105,6 +105,17 @@ class LegendsGGController extends AbstractController
                 $levelBorder = "300";
             }
         }
+        // Busca ligas
+        $summonerLeagues = $restController->getSummonerLeagues($server, $summonerObj->getId());
+        if (is_string($summonerLeagues)) {
+            if ($summonerLeagues == 'err-server-not-valid'
+              || $summonerLeagues == 'err-summoner-leagues-not-found'
+              || $summonerLeagues == 'err-api-key') {
+              return $this->redirectToRoute('error', array(
+                  'error' => $summonerLeagues
+              ));
+            }
+        }
         // Retorna al summoner
         return $this->render('summoner.html.twig', [
             'active' => '',
@@ -112,7 +123,8 @@ class LegendsGGController extends AbstractController
             'summoner' => $summonerObj,
             'lol_patch' => $_ENV['LOL_PATCH'],
             'ddragon' => $_ENV['DDRAGON'],
-            'levelBorder' => $levelBorder
+            'levelBorder' => $levelBorder,
+            'summonerLeagues' => $summonerLeagues
         ]);
     }
 
