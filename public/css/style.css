@@ -54,27 +54,23 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .icon-border {
-    width: 62%!important;
-    left: 3.9vw;
-    top: 0.7vh;
+    width: 160px;
+    left: -15px;
+    top: -30px;
     position: absolute;
-    margin-top: -25px;
-    margin-left: -25px;
 }
 
-@media all and (max-width: 992px) {
-    .icon-border {
-        left: 3.7vw;
-        top: 1vh;
-    }
+.icon-container {
+    width: 200px;
 }
 
-@media all and (max-width: 778px) {
-    .icon-border {
-        width: 74%!important;
-        left: 13.7vw;
-        top: -5vh;
-    }
+.summoner-level {
+    color: #F5871F;
+    margin-left: 42px;
+    margin-top: -12px;
+    font-size: 0.8rem;
+    position: absolute;
+    font-weight: bold;
 }
 
 
@@ -198,75 +194,75 @@ footer div a:hover {
 *********************************/
 
 .link_wrapper{
-  position: relative;
-  width: 190px;
-  margin: 0 auto;
+    position: relative;
+    width: 190px;
+    margin: 0 auto;
 }
 
 @media all and (max-width:321px) {
-	.link_wrapper {
-		margin-left: -40%;
-	}
+    .link_wrapper {
+        margin-left: -40%;
+    }
 }
 
 @media all and (min-width: 321px) and (max-width:376px) {
-	.link_wrapper {
-		margin-left: -20%;
-	}
+    .link_wrapper {
+        margin-left: -20%;
+    }
 }
 
 @media all and (min-width: 376px) and (max-width:426px) {
-	.link_wrapper {
-		margin-left: -8%;
-	}
+    .link_wrapper {
+        margin-left: -8%;
+    }
 }
 
 .search-button{
-  display: block;
-  width: 250px;
-  height: 50px;
-  line-height: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  background: #333;
-  text-align: center;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border: 3px solid #333;
-  transition: all .35s;
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #333;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #333;
+    transition: all .35s;
 }
 
 .icon{
-  width: 50px;
-  height: 50px;
-  border: 3px solid transparent;
-  position: absolute;
-  transform: rotate(45deg);
-  right: 0;
-  top: 0;
-  z-index: -1;
-  transition: all .35s;
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .35s;
 }
 
 .icon svg{
-  width: 30px !important;
-  position: absolute;
-  top: calc(65% - 15px);
-  left: calc(50% - 15px);
-  transform: rotate(-45deg);
-  fill: rgba(191,13,0,1);
-  transition: all .35s;
+    width: 30px !important;
+    position: absolute;
+    top: calc(65% - 15px);
+    left: calc(50% - 15px);
+    transform: rotate(-45deg);
+    fill: rgba(191,13,0,1);
+    transition: all .35s;
 }
 
 .search-button:hover{
-  width: 200px;
-  border: 3px solid rgba(191,13,0,1);
-  background: transparent;
-  color: rgba(191,13,0,1);
+    width: 200px;
+    border: 3px solid rgba(191,13,0,1);
+    background: transparent;
+    color: rgba(191,13,0,1);
 }
 
 .search-button:hover + .icon{
-  border: 3px solid rgba(191,13,0,1);
-  right: -25%;
+    border: 3px solid rgba(191,13,0,1);
+    right: -25%;
 }
