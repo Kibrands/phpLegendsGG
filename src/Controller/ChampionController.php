@@ -9,11 +9,13 @@ use App\Entity\Champion;
 class ChampionController extends AbstractController {
 
     function getChampionByKey($key) {
-        $entityManager = $this->getDoctrine()->getManager();
-        $champion = $entityManager->getRepository(Champion::class)->findOneByChampKey($key);
-        if ($champion == null) {
-            $champion = new Champion();
-            $champion->setName('err-champ-not-found');
+        // TODO -> busca key en el array de campeones de ENV -> CHAMPS
+        $champion = new Champion();
+        foreach ($_ENV['CHAMPS'] as $champ) {
+            if ($champ->getChampKey() == $key) {
+                $champion = $champ;
+                break;
+            }
         }
         return $this->render('champion/champData.html.twig',
                         ['champion' => $champion]);

@@ -41,19 +41,34 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="col-12 border border-dark shadow bg-light mt-5">
+            <div class="col-12 border border-dark shadow bg-light mt-3">
                 <div class="text-info py-3 h4 text-center">
                     <i class="fas fa-wrench"></i> Estamos trabajando duro para traerte las mejores estadísticas.
                 </div>
             </div>
             {% for match in matches.matches %}
-                <div class="col-12 border border-dark shadow bg-light mt-5">
-                    <div class="py-3 h4 text-center">
-                        {{ match.gameId }} - {{ render(controller(
-                                'App\\Controller\\ChampionController::getChampionByKey',
-                                { 'key': match.champion }
-                            )) }}<br/>
-                        {{ match.timestamp }} - {{ match.lane }}
+                <div class="col-12 border border-dark shadow mt-1 bg-light">
+                    <div class="py-3 h4">
+                        <div class="row">
+                            <div class="col-2">
+                                <img alt="{{ render(controller(
+                                    'App\\Controller\\ChampionController::getChampionByKey',
+                                    { 'key': match.champion }
+                                )) }}" src="{{ ddragon ~ lol_patch ~ '/img/champion/' ~  render(controller(
+                                    'App\\Controller\\ChampionController::getChampionByKey',
+                                    { 'key': match.champion }
+                                )) ~ '.png' }}" width="80px" >
+                            </div>
+                            <div class="col-7">
+                                {{ match.timestamp }} - {{ match.lane }}
+                            </div>
+                            <div class="col-3">
+                                {{ render(controller(
+                                    'App\\Controller\\MatchController::getMatchData',
+                                    { 'server': server, 'matchId': match.gameId }
+                                )) }}
+                            </div>
+                        </div>
                     </div>
                 </div>
             {% else %}

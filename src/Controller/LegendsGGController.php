@@ -5,7 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use App\Controller\RestController;
-use App\Entity\Summoner;
+use App\Entity\Champion;
 
 class LegendsGGController extends AbstractController {
 
@@ -113,8 +113,14 @@ class LegendsGGController extends AbstractController {
                 ));
             }
         }
-        if ($matches->getTotalGames() > 30) {
-            $matches->setMatches(array_slice($matches->getMatches(), 0, 30));
+        if ($matches->getTotalGames() > 20) {
+            $matches->setMatches(array_slice($matches->getMatches(), 0, 20));
+        }
+        // Inicializa los campeones si no lo están
+        if (!isset($_ENV['CHAMPS'])) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $champions = $entityManager->getRepository(Champion::class)->findAll();
+            $_ENV['CHAMPS'] = $champions;
         }
         // Retorna al summoner
         return $this->render('summoner.html.twig', [
