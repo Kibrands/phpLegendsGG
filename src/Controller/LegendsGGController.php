@@ -21,9 +21,14 @@ class LegendsGGController extends AbstractController {
         ]);
     }
 
-    function ranking() {
+    function ranking(Request $request) {
+        $server = $request->request->get('server');
+        if ($server == null) {
+            $server = 'na';
+        }
         return $this->render('ranking.html.twig', [
-                    'active' => 'ranking'
+                    'active' => 'ranking',
+                    'server' => $server
         ]);
     }
 

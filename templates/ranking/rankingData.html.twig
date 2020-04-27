@@ -1,0 +1,49 @@
+{# ranking/rankingData.html.twig #}
+<div class="row">
+    <div class="col-12 border border-secondary shadow mt-4 text-center">
+        <h1>Ranking Solo/Dúo</h1>
+        <div class="row border border-secondary">
+            <div class="col-12">
+                <div class="py-3">
+                    <h5>{{ rankingSolo.entries[0].summonerName }} - {{ rankingSolo.entries[0].leaguePoints }} LP</h5>
+                    <p class="text-muted">Wins : {{ rankingSolo.entries[0].wins }} - Losses: {{ rankingSolo.entries[0].losses }}</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="py-3">
+                    <h5>{{ rankingSolo.entries[1].summonerName }} - {{ rankingSolo.entries[1].leaguePoints }} LP</h5>
+                    <p class="text-muted">Wins : {{ rankingSolo.entries[1].wins }} - Losses: {{ rankingSolo.entries[1].losses }}</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="py-3">
+                    <h5>{{ rankingSolo.entries[2].summonerName }} - {{ rankingSolo.entries[2].leaguePoints }} LP</h5>
+                    <p class="text-muted">Wins : {{ rankingSolo.entries[2].wins }} - Losses: {{ rankingSolo.entries[2].losses }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 border border-secondary shadow mt-4 text-center">
+        <h1>Ranking Flex</h1>
+        <div class="row border border-secondary">
+            <div class="col-12">
+                <div class="py-3">
+                    <h5>{{ rankingFlex.entries[0].summonerName }} - {{ rankingFlex.entries[0].leaguePoints }} LP</h5>
+                    <p class="text-muted">Wins : {{ rankingFlex.entries[0].wins }} - Losses: {{ rankingFlex.entries[0].losses }}</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="py-3">
+                    <h5>{{ rankingFlex.entries[1].summonerName }} - {{ rankingFlex.entries[1].leaguePoints }} LP</h5>
+                    <p class="text-muted">Wins : {{ rankingFlex.entries[1].wins }} - Losses: {{ rankingFlex.entries[1].losses }}</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="py-3">
+                    <h5>{{ rankingFlex.entries[2].summonerName }} - {{ rankingFlex.entries[2].leaguePoints }} LP</h5>
+                    <p class="text-muted">Wins : {{ rankingFlex.entries[2].wins }} - Losses: {{ rankingFlex.entries[2].losses }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
