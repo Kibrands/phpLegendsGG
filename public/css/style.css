@@ -266,3 +266,57 @@ footer div a:hover {
     border: 3px solid rgba(191,13,0,1);
     right: -25%;
 }
+
+
+/*********************************
+8. Ranking
+*********************************/
+
+.leader-card {
+    width: 50%;
+    margin: auto;
+}
+
+.secondary-card {
+    width: 100%;
+}
+
+.leader-icon {
+    color: #F5871F;
+    transform: rotate(-90deg);
+}
+
+.leader-band {
+    margin-top: 10px;
+    margin-left: -20px;
+    padding: 5px;
+    width: 100px;
+    text-align: left;
+    transform: rotate(90deg);
+    font-weight: bold;
+    border-radius: .25rem;
+    position: absolute;
+}
+
+.secondary-band {
+    margin-top: -5px;
+    margin-left: -7px;
+    padding: 5px;
+    width: 75px;
+    text-align: left;
+    transform: rotate(90deg);
+    font-weight: bold;
+    border-radius: .25rem;
+    position: absolute;
+}
+
+.leader-band span,
+.secondary-band span {
+    color: white;
+}
+
+@media (max-width:768px) {
+    .leader-card {
+        width: 100%;
+    }
+}
