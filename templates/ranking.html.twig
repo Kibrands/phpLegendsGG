@@ -29,10 +29,10 @@
                 </form>
             </div>
             <div class="col-12">
-                {{ render(controller(
+                {{ render_hinclude(controller(
                     'App\\Controller\\RankingController::renderRankingByServer',
                     { 'server': server }
-                )) }}
+                ),  {default: '<h4 class="mt-5 text-center">Loading...</h4>'}) }}
             </div>
         </div>
         <div class="push"></div>

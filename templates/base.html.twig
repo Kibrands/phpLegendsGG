@@ -3,50 +3,51 @@
 <html lang="es">
     <head>
         <meta charset="utf-8" />
-	    <meta name="title" content="Legends GG - Estadísticas de League of Legends" />
-	    <meta name="description" content="Las estadísticas de tu clasificación, kda, tier, winrate... Hecho por y para invocadores" />
-	    <meta name="keywords" content="kda, winrate, stats, estadísticas, lol, league of legends, rank, tier" />
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-	    <title>{% block title %}Legends GG - {% endblock %}</title>
+        <meta name="title" content="Legends GG - Estadísticas de League of Legends" />
+        <meta name="description" content="Las estadísticas de tu clasificación, kda, tier, winrate... Hecho por y para invocadores" />
+        <meta name="keywords" content="kda, winrate, stats, estadísticas, lol, league of legends, rank, tier" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>{% block title %}Legends GG - {% endblock %}</title>
         {% block stylesheets %}
-        <link rel="stylesheet" type="text/css" href="{{ asset('vendors/bootstrap-4.4.0-dist/css/bootstrap.min.css') }}" />
-        <link rel="stylesheet" type="text/css" href="{{ asset('vendors/fontawesome-5.12.1/css/all.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/header.css') }}" />
-        <link rel="icon" type="image/png" href="{{ asset('img/icon.png') }}" />
+            <link rel="stylesheet" type="text/css" href="{{ asset('vendors/bootstrap-4.4.0-dist/css/bootstrap.min.css') }}" />
+            <link rel="stylesheet" type="text/css" href="{{ asset('vendors/fontawesome-5.12.1/css/all.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/header.css') }}" />
+            <link rel="icon" type="image/png" href="{{ asset('img/icon.png') }}" />
         {% endblock %}
     </head>
     <body>
         <div class="pace"></div>
         <header class="header">
-        {% include 'header.html.twig' with {'active': active} %}
+            {% include 'header.html.twig' with {'active': active} %}
         </header>
         {% block body %}
-        <div class="container main-container">
-            <div class="text-center">
-            <h2>Web en construcción</h2>
-            <i class="fas fa-tools display-1"></i>
+            <div class="container main-container">
+                <div class="text-center">
+                    <h2>Web en construcción</h2>
+                    <i class="fas fa-tools display-1"></i>
+                </div>
             </div>
-        </div>
         {% endblock %}
         <footer class="footer text-white-50">
-        {% include 'footer.html.twig' %}
+            {% include 'footer.html.twig' %}
         </footer>
         {% block javascripts %}
-        <script src="{{ asset('vendors/bootstrap-4.4.0-dist/js/jquery-3.4.1.min.js') }}"></script>
-        <script src="{{ asset('vendors/bootstrap-4.4.0-dist/js/popper.js') }}"></script>
-        <script src="{{ asset('vendors/bootstrap-4.4.0-dist/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('vendors/fontawesome-5.12.1/js/all.js') }}"></script>
-        <script src="{{ asset('js/pace.js') }}"></script>
-        <script>
-            $(document).scroll(function() {
-                if ($(document).scrollTop() > 86) {
-                    $("#banner").addClass("shrink border border-secondary shadow");
-                } else {
-                    $("#banner").removeClass("shrink border border-secondary shadow");
-                }
-            });
-        </script>
+            <script src="{{ asset('vendors/bootstrap-4.4.0-dist/js/jquery-3.4.1.min.js') }}"></script>
+            <script src="{{ asset('vendors/bootstrap-4.4.0-dist/js/popper.js') }}"></script>
+            <script src="{{ asset('vendors/bootstrap-4.4.0-dist/js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('vendors/fontawesome-5.12.1/js/all.js') }}"></script>
+            <script src="{{ asset('js/pace.js') }}"></script>
+            <script src="{{ asset('vendors/hinclude-1.2.0/hinclude.js') }}"></script>
+            <script>
+                $(document).scroll(function () {
+                    if ($(document).scrollTop() > 86) {
+                        $("#banner").addClass("shrink border border-secondary shadow");
+                    } else {
+                        $("#banner").removeClass("shrink border border-secondary shadow");
+                    }
+                });
+            </script>
         {% endblock %}
     </body>
 </html>

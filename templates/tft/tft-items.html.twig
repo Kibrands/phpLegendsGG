@@ -1,3 +1,38 @@
 {# tft-items.html.twig #}
 {% extends "base.html.twig" %}
 {% block title %}{{ parent() }}TFT - Objetos{% endblock %}
+{% block body %}
+    <div class="container main-container">
+        <h2>Tabla objetos</h2>
+        <div class="row mt-4">
+            <div class="col-1"> </div>
+            <div class="col-1"> </div>
+            <div class="col-1">
+                <a href="#" data-toggle="popover" data-content="Prueba" data-placement="top"
+                   title="Guantes de combate">
+                    <img class="img img-fluid rounded" src="{{ asset('img/tft/sparringgloves.png') }}"
+                         alt="Guantes de combate" >
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="push my-4"/>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover({
+                //trigger: 'focus',
+                trigger: 'hover',
+                html: true,
+                content: function () {
+                    return $(this).data('data-content');
+                },
+                title: function () {
+                    return $(this).data('title');
+                }
+            })
+        });
+    </script>
+{% endblock %}
