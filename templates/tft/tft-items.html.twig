@@ -3,36 +3,869 @@
 {% block title %}{{ parent() }}TFT - Objetos{% endblock %}
 {% block body %}
     <div class="container main-container">
-        <h2>Tabla objetos</h2>
+        <h2>Tabla de objetos</h2>
         <div class="row mt-4">
-            <div class="col-1"> </div>
-            <div class="col-1"> </div>
-            <div class="col-1">
-                <a href="#" data-toggle="popover" data-content="Prueba" data-placement="top"
-                   title="Guantes de combate">
-                    <img class="img img-fluid rounded" src="{{ asset('img/tft/sparringgloves.png') }}"
+            <!-- Fila 1 -->
+            <div class="col-1 p-0"> </div>
+            <div class="col-1 p-1"> </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-cr:+10%_icon-dg:+10%" data-title="Guantes de combate"
+                   data-popover-description="+10% Impacto Crítico<br/>+10% Posibilidad de Esquivar">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/sparringgloves.png') }}"
                          alt="Guantes de combate" >
                 </a>
             </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-ad:+15" data-title="Espadón"
+                   data-popover-description="+15 Daño de Ataque">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/bfsword.png') }}"
+                         alt="Espadón" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-ap:+20" data-title="Vara Innecesariamente Grande"
+                   data-popover-description="+20 Poder de Habilidad">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/needlesslylargerod.png') }}"
+                         alt="Vara Innecesariamente Grande" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-as:+15%" data-title="Arco Curvo"
+                   data-popover-description="+15% Velocidad de Ataque">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/recurvebow.png') }}"
+                         alt="Arco Curvo" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-mana:+15" data-title="Lágrima de la diosa"
+                   data-popover-description="+15 Maná">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/tearofthegoddess.png') }}"
+                         alt="Lágrima de la diosa" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-ar:+25" data-title="Chaleco de cadenas"
+                   data-popover-description="+25 Armadura">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/chainvest.png') }}"
+                         alt="Chaleco de cadenas" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-mr:+25" data-title="Capa Negatrón"
+                   data-popover-description="+25 Resistencia Mágica">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/negatroncloak.png') }}"
+                         alt="Capa Negatrón" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-hp:+200" data-title="Cinturón de Gigante"
+                   data-popover-description="+200 Vida">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/giantsbelt.png') }}"
+                         alt="Cinturón de Gigante" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="" data-title="Espátula"
+                   data-popover-description="Tiene que hacer <i>algo</i>...">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/spatula.png') }}"
+                         alt="Espátula" >
+                </a>
+            </div>
+            <div class="col-1 p-0"> </div>
+            <!-- Fila 2 -->
+            <div class="col-1 p-0"> </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-cr:+10%_icon-dg:+10%" data-title="Guantes de combate"
+                   data-popover-description="+10% Impacto Crítico<br/>+10% Posibilidad de Esquivar">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/sparringgloves.png') }}"
+                         alt="Guantes de combate" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:sparringgloves+sparringgloves_icon-cr:+20%_icon-dg:+20%" data-title="Guantes del ladrón"
+                   data-popover-description="Al principio de cada fase de planificación, el portador cuenta con dos objetos de forma temporal. El poder de los objetos temporales aumenta según el nivel del jugador. Ocupa tres huecos de objeto.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/thiefsgloves.png') }}"
+                         alt="Guantes del ladrón" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:bfsword+sparringgloves_icon-ad:+15_icon-cr:+20%" data-title="Filo Infinito"
+                   data-popover-description="Otorga +100% de daño crítico.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/infinityedge.png') }}"
+                         alt="Filo Infinito" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:needlesslylargerod+sparringgloves_icon-ap:+20%_icon-cr:+20%" data-title="Guantelete enjoyado"
+                   data-popover-description="Los hechizos pueden infligir daño crítico.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/jeweledgauntlet.png') }}"
+                         alt="Guantelete enjoyado" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:recurvebow+sparringgloves_icon-as:+15%_icon-cr:+20%" data-title="Últimas Palabras"
+                   data-popover-description="Cuando el portador asesta un golpe crítico, la armadura del objetivo se reduce un 90% durante 3 s. Este efecto no se acumula.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/lastwhisper.png') }}"
+                         alt="Últimas Palabras" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:tearofthegoddess+sparringgloves_icon-mana:+15_icon-cr:+20%" data-title="La Mano de la Justicia"
+                   data-popover-description="Al comienzo de cada fase de planificación, el portador obtiene una de las siguientes opciones:<br><ul><li>Los ataques básicos y los hechizos infligen +50% de daño.</li><li>Los ataques básicos curan 50 de vida al impactar.</li></ul>">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/handofjustice.png') }}"
+                         alt="La Mano de la Justicia" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:chainvest+sparringgloves_icon-ar:+25_icon-dg:+10%_icon-cr:+10%" data-title="Velo de Sosiego"
+                   data-popover-description="Cuando empieza el combate, dispara un rayo en línea recta que retrasa el primer lanzamiento de la habilidad de los enemigos afectados al aumentar su maná máximo un 40% hasta que realizan el lanzamiento.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/shroudofstillness.png') }}"
+                         alt="Velo de Sosiego" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+sparringgloves_icon-mr:+25_icon-dg:+20%" data-title="Fajín"
+                   data-popover-description="El portador es inmune al control de adversario durante los primeros 10 s del combate.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/quicksilver.png') }}"
+                         alt="Fajín" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:giantsbelt+sparringgloves_icon-hp:+200_icon-dg:+20%" data-title="Garra Trampa"
+                   data-popover-description="Bloquea la primera habilidad enemiga que impacte contra el portador y aturde al enemigo que la lanzó durante 4 s.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/trapclaw.png') }}"
+                         alt="Garra Trampa" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+sparringgloves_icon-dg:+10%_icon-cr:+10%" data-title="Corazón de la Estrella Oscura"
+                   data-popover-description="El portador obtiene el atributo Estrella oscura.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/darkstarsheart.png') }}"
+                         alt="Corazón de la Estrella Oscura" >
+                </a>
+            </div>
+            <div class="col-1 p-0"> </div>
+            <!-- Fila 3 -->
+            <div class="col-1 p-0"> </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-ad:+15" data-title="Espadón"
+                   data-popover-description="+15 Daño de Ataque">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/bfsword.png') }}"
+                         alt="Espadón" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:bfsword+sparringgloves_icon-ad:+15_icon-cr:+20%" data-title="Filo Infinito"
+                   data-popover-description="Otorga +100% de daño crítico.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/infinityedge.png') }}"
+                         alt="Filo Infinito" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:bfsword+bfsword_icon-ad:+30" data-title="Filo Mortal"
+                   data-popover-description="Participar en un asesinato otorga +30 de daño de ataque durante el resto del combate. Este efecto no tiene límite de acumulaciones.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/deathblade.png') }}"
+                         alt="Filo Mortal" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:needlesslylargerod+bfsword_icon-ad:+15_icon-ap:+20%" data-title="Sable-pistola Hextech"
+                   data-popover-description="Los ataques básicos y hechizos curan al portador un 25% del daño infligido.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/hextechgunblade.png') }}"
+                         alt="Sable-pistola Hextech" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:recurvebow+bfsword_icon-ad:+15_icon-as:+15%" data-title="Verdugo de Gigantes"
+                   data-popover-description="Los ataques básicos del portador infligen un 12% adicional de la vida actual del objetivo como daño físico.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/giantslayer.png') }}"
+                         alt="Verdugo de Gigantes" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:tearofthegoddess+bfsword_icon-ad:+15_icon-mana:+15" data-title="Lanza de Shojin"
+                   data-popover-description="Tras lanzar su habilidad, los ataques básicos del portador restauran un 18% de su maná máximo al golpear.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/spearofshojin.png') }}"
+                         alt="Lanza de Shojin" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:chainvest+bfsword_icon-ad:+15_icon-ar:+25" data-title="Ángel de la Guarda"
+                   data-popover-description="Evita la primera muerte del portador y, a cambio, lo pone en estado de estasis. Tras 2 s, vuelve con 400 de vida y sin ningún efecto negativo.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/guardianangel.png') }}"
+                         alt="Ángel de la Guarda" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+bfsword_icon-ad:+15_icon-mr:+25" data-title="Sanguinaria"
+                   data-popover-description="Los ataques básicos curan al portador un 35% del daño infligido.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/bloodthirster.png') }}"
+                         alt="Sanguinaria" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:giantsbelt+bfsword_icon-ad:+15_icon-hp:+200" data-title="Heraldo de Zeke"
+                   data-popover-description="Al comienzo del combate, la velocidad de ataque del portador y todos los aliados que estén a 1 hexágonos de distancia en la misma fila aumenta un 30% durante el resto del combate.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/zekesherald.png') }}"
+                         alt="Heraldo de Zeke" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+bfsword_icon-ad:+15" data-title="Hoja del rey arruinado"
+                   data-popover-description="El portador obtiene el atributo Espadachín.<br/>Único - Solo uno por campeón.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/bladeoftheruinedking.png') }}"
+                         alt="Hoja del rey arruinado" >
+                </a>
+            </div>
+            <div class="col-1 p-0"> </div>
+            <!-- Fila 4 -->
+            <div class="col-1 p-0"> </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-ap:+20" data-title="Vara Innecesariamente Grande"
+                   data-popover-description="+20 Poder de Habilidad">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/needlesslylargerod.png') }}"
+                         alt="Vara Innecesariamente Grande" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:needlesslylargerod+sparringgloves_icon-ap:+20%_icon-cr:+20%" data-title="Guantelete enjoyado"
+                   data-popover-description="Los hechizos pueden infligir daño crítico.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/jeweledgauntlet.png') }}"
+                         alt="Guantelete enjoyado" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:needlesslylargerod+bfsword_icon-ad:+15_icon-ap:+20%" data-title="Sable-pistola Hextech"
+                   data-popover-description="Los ataques básicos y hechizos curan al portador un 25% del daño infligido.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/hextechgunblade.png') }}"
+                         alt="Sable-pistola Hextech" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:needlesslylargerod+needlesslylargerod_icon-ap:+40%" data-title="Sombrero mortal de Rabadon"
+                   data-popover-description="Otorga una amplificación del poder de hechizos del 50%.(Todas las fuentes de poder de hechizos son un 50% más efectivas).">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/rabadonsdeathcap.png') }}"
+                         alt="Sombrero mortal de Rabadon" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:recurvebow+needlesslylargerod_icon-as:+15%_icon-ap:+20%" data-title="Hoja de furia de Guinsoo"
+                   data-popover-description="Los ataques básicos otorgan +5% de velocidad de ataque adicional durante el resto del combate. Este efecto no tiene límite de acumulaciones.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/guinsoosrageblade.png') }}"
+                         alt="Hoja de furia de Guinsoo" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:tearofthegoddess+needlesslylargerod_icon-ap:+20%_icon-mana:+15" data-title="Eco de Luden"
+                   data-popover-description="Cuando el portador lanza su habilidad, el primer objetivo recibe daño mágico, y hasta 3 enemigos cercanos reciben 150/175/225 ★ de daño mágico adicional.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/ludensecho.png') }}"
+                         alt="Eco de Luden" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:chainvest+needlesslylargerod_icon-ap:+20%_icon-ar:+25" data-title="Medallón de los Solari de Hierro"
+                   data-popover-description="Al comienzo del combate, el portador y todos los aliados que estén a 2 hexágonos de distancia en la misma fila obtienen un escudo que bloquea 250/275/350 ★ de daño durante 8 s.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/locketoftheironsolari.png') }}"
+                         alt="Medallón de los Solari de Hierro" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+needlesslylargerod_icon-ap:+20%_icon-mr:+25" data-title="Chispa iónica"
+                   data-popover-description="Los enemigos situados a 2 hexágonos ven reducida su resistencia mágica un 50% (no se acumula). Cuando lanzan una habilidad, reciben una descarga de daño mágico equivalente al 225% de su maná máximo.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/ionicspark.png') }}"
+                         alt="Chispa iónica" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:giantsbelt+needlesslylargerod_icon-ap:+20%_icon-hp:+200" data-title="Morellonomicón"
+                   data-popover-description="Cuando el portador inflige daño con su habilidad, quema al objetivo, lo que le inflige un 27% de su vida máxima como daño verdadero a lo largo de 10 s y reduce un 50% su curación hasta que termine el efecto.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/morellonomicon.png') }}"
+                         alt="Morellonomicón" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+needlesslylargerod_icon-ap:+20%" data-title="Carga del pirotécnico"
+                   data-popover-description="El portador obtiene el atributo Pirotécnico.<br/>Único - Solo uno por campeón">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/demolitionistscharge.png') }}"
+                         alt="Carga del pirotécnico" >
+                </a>
+            </div>
+            <div class="col-1 p-0"> </div>
+            <!-- Fila 5 -->
+            <div class="col-1 p-0"> </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-as:+15%" data-title="Arco Curvo"
+                   data-popover-description="+15% Velocidad de Ataque">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/recurvebow.png') }}"
+                         alt="Arco Curvo" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:recurvebow+sparringgloves_icon-as:+15%_icon-cr:+20%" data-title="Últimas Palabras"
+                   data-popover-description="Cuando el portador asesta un golpe crítico, la armadura del objetivo se reduce un 90% durante 3 s. Este efecto no se acumula.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/lastwhisper.png') }}"
+                         alt="Últimas Palabras" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:recurvebow+bfsword_icon-ad:+15_icon-as:+15%" data-title="Verdugo de Gigantes"
+                   data-popover-description="Los ataques básicos del portador infligen un 12% adicional de la vida actual del objetivo como daño físico.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/giantslayer.png') }}"
+                         alt="Verdugo de Gigantes" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:recurvebow+needlesslylargerod_icon-as:+15%_icon-ap:+20%" data-title="Hoja de furia de Guinsoo"
+                   data-popover-description="Los ataques básicos otorgan +5% de velocidad de ataque adicional durante el resto del combate. Este efecto no tiene límite de acumulaciones.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/guinsoosrageblade.png') }}"
+                         alt="Hoja de furia de Guinsoo" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:recurvebow+recurvebow_icon-as:+30%" data-title="Cañón de fuego rápido"
+                   data-popover-description="Otorga un 200% de alcance de ataque.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/rapidfirecannon.png') }}"
+                         alt="Cañón de fuego rápido" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:tearofthegoddess+recurvebow_icon-as:+15%_icon-mana:+15" data-title="Puñal de Statikk"
+                   data-popover-description="Cada tercer ataque básico del portador inflige 80 de daño mágico a 3/4/5 ★ enemigos.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/statikkshiv.png') }}"
+                         alt="Puñal de Statikk" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:chainvest+recurvebow_icon-as:+15%_icon-ar:+25" data-title="Resolución titánica"
+                   data-popover-description="Cuando el portador recibe daño o inflige un golpe crítico, obtiene un 2% de daño adicional acumulable. Cuando se ha acumulado 50 veces, el portador aumenta de tamaño y obtiene 25 de armadura y resistencia mágica.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/titansresolve.png') }}"
+                         alt="Resolución titánica" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+recurvebow_icon-as:+15%_icon-mr:+25" data-title="Huracán de Runaan"
+                   data-popover-description="Los ataques básicos disparan un proyectil a otro enemigo cercano que inflige un 70% del daño de ataque del portador y aplica efectos de impacto.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/runaanshurricane.png') }}"
+                         alt="Huracán de Runaan" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:giantsbelt+recurvebow_icon-as:+15%_icon-hp:+200" data-title="Portal Zz'Rot"
+                   data-popover-description="Cuando el portador muere, emerge un avatar con 1000/2000/3000 ★ de vida para continuar la lucha.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/zzrotportal.png') }}"
+                         alt="Portal Zz'Rot" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+recurvebow_icon-as:+15%" data-title="Garras del infiltrado"
+                   data-popover-description="El portador obtiene el atributo Infiltrado.<br/>Único - Solo uno por campeón">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/infiltratorstalons.png') }}"
+                         alt="Garras del infiltrado" >
+                </a>
+            </div>
+            <div class="col-1 p-0"> </div>
+            <!-- Fila 6 -->
+            <div class="col-1 p-0"> </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-mana:+15" data-title="Lágrima de la diosa"
+                   data-popover-description="+15 Maná">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/tearofthegoddess.png') }}"
+                         alt="Lágrima de la diosa" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:tearofthegoddess+sparringgloves_icon-mana:+15_icon-cr:+20%" data-title="La Mano de la Justicia"
+                   data-popover-description="Al comienzo de cada fase de planificación, el portador obtiene una de las siguientes opciones:<br><ul><li>Los ataques básicos y los hechizos infligen +50% de daño.</li><li>Los ataques básicos curan 50 de vida al impactar.</li></ul>">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/handofjustice.png') }}"
+                         alt="La Mano de la Justicia" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:tearofthegoddess+bfsword_icon-ad:+15_icon-mana:+15" data-title="Lanza de Shojin"
+                   data-popover-description="Tras lanzar su habilidad, los ataques básicos del portador restauran un 18% de su maná máximo al golpear.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/spearofshojin.png') }}"
+                         alt="Lanza de Shojin" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:tearofthegoddess+needlesslylargerod_icon-ap:+20%_icon-mana:+15" data-title="Eco de Luden"
+                   data-popover-description="Cuando el portador lanza su habilidad, el primer objetivo recibe daño mágico, y hasta 3 enemigos cercanos reciben 150/175/225 ★ de daño mágico adicional.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/ludensecho.png') }}"
+                         alt="Eco de Luden" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:tearofthegoddess+recurvebow_icon-as:+15%_icon-mana:+15" data-title="Puñal de Statikk"
+                   data-popover-description="Cada tercer ataque básico del portador inflige 80 de daño mágico a 3/4/5 ★ enemigos.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/statikkshiv.png') }}"
+                         alt="Puñal de Statikk" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:tearofthegoddess+tearofthegoddess_icon-mana:+30" data-title="Abrazo del serafín"
+                   data-popover-description="Tras lanzar su habilidad, el portador obtiene 20 de maná.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/seraphsembrace.png') }}"
+                         alt="Abrazo del serafín" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:chainvest+tearofthegoddess_icon-mana:+15_icon-ar:+25" data-title="Corazón de hielo"
+                   data-popover-description="Reduce en un 50% la velocidad de ataque de los enemigos cercanos. Cada Corazón de hielo adicional que porte un campeón aumenta el radio de efecto.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/frozenheart.png') }}"
+                         alt="Corazón de hielo" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+tearofthegoddess_icon-mana:+15_icon-mr:+25" data-title="Cáliz de favor"
+                   data-popover-description="Cuando el portador lanza una habilidad, restaura 10 de maná a los aliados que se encuentren a 2 hexágonos o menos de distancia y a sí mismo.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/chaliceoffavor.png') }}"
+                         alt="Cáliz de favor" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:giantsbelt+tearofthegoddess_icon-mana:+15_icon-hp:+200" data-title="Redención"
+                   data-popover-description="Cuando el portador muere, los aliados se curan 800 de vida.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/redemption.png') }}"
+                         alt="Redención" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+tearofthegoddess_icon-mana:+15" data-title="Amuleto de las guardianas"
+                   data-popover-description="El portador obtiene el atributo Guardiana de las estrellas.<br/>Único - Solo uno por campeón">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/starguardianscharm.png') }}"
+                         alt="Amuleto de las guardianas" >
+                </a>
+            </div>
+            <div class="col-1 p-0"> </div>
+            <!-- Fila 7 -->
+            <div class="col-1 p-0"> </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-ar:+25" data-title="Chaleco de cadenas"
+                   data-popover-description="+25 Armadura">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/chainvest.png') }}"
+                         alt="Chaleco de cadenas" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:chainvest+sparringgloves_icon-ar:+25_icon-dg:+10%_icon-cr:+10%" data-title="Velo de Sosiego"
+                   data-popover-description="Cuando empieza el combate, dispara un rayo en línea recta que retrasa el primer lanzamiento de la habilidad de los enemigos afectados al aumentar su maná máximo un 40% hasta que realizan el lanzamiento.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/shroudofstillness.png') }}"
+                         alt="Velo de Sosiego" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:chainvest+bfsword_icon-ad:+15_icon-ar:+25" data-title="Ángel de la Guarda"
+                   data-popover-description="Evita la primera muerte del portador y, a cambio, lo pone en estado de estasis. Tras 2 s, vuelve con 400 de vida y sin ningún efecto negativo.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/guardianangel.png') }}"
+                         alt="Ángel de la Guarda" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:chainvest+needlesslylargerod_icon-ap:+20%_icon-ar:+25" data-title="Medallón de los Solari de Hierro"
+                   data-popover-description="Al comienzo del combate, el portador y todos los aliados que estén a 2 hexágonos de distancia en la misma fila obtienen un escudo que bloquea 250/275/350 ★ de daño durante 8 s.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/locketoftheironsolari.png') }}"
+                         alt="Medallón de los Solari de Hierro" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:chainvest+recurvebow_icon-as:+15%_icon-ar:+25" data-title="Resolución titánica"
+                   data-popover-description="Cuando el portador recibe daño o inflige un golpe crítico, obtiene un 2% de daño adicional acumulable. Cuando se ha acumulado 50 veces, el portador aumenta de tamaño y obtiene 25 de armadura y resistencia mágica.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/titansresolve.png') }}"
+                         alt="Resolución titánica" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:chainvest+tearofthegoddess_icon-mana:+15_icon-ar:+25" data-title="Corazón de hielo"
+                   data-popover-description="Reduce en un 50% la velocidad de ataque de los enemigos cercanos. Cada Corazón de hielo adicional que porte un campeón aumenta el radio de efecto.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/frozenheart.png') }}"
+                         alt="Corazón de hielo" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:chainvest+chainvest_icon-ar:+50" data-title="Chaleco de zarzas"
+                   data-popover-description="Anula el daño adicional de los golpes críticos recibidos. Al ser golpeado por un ataque básico, inflige 100/140/200 ★ de daño mágico a todos los enemigos cercanos (una vez cada 2.5 s).">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/bramblevest.png') }}"
+                         alt="Chaleco de zarzas" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+chainvest_icon-ar:+25_icon-mr:+25" data-title="Rompeespadas"
+                   data-popover-description="Los ataques básicos del portador tienen una probabilidad del 25% de desarmar al objetivo durante 3 s, lo que le impide realizar ataques básicos.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/swordbreaker.png') }}"
+                         alt="Rompeespadas" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:giantsbelt+chainvest_icon-ar:+25_icon-hp:+200" data-title="Mejora roja"
+                   data-popover-description="Al impactar, los ataques básicos del portador queman al objetivo, lo que le inflige un 27% de su vida máxima como daño verdadero a lo largo de 10 s y reduce un 50% su curación hasta que termine el efecto.<br/>Único - Solo uno por campeón.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/redbuff.png') }}"
+                         alt="Mejora roja" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+chainvest_icon-ar:+25" data-title="Medalla rebelde"
+                   data-popover-description="El portador obtiene el atributo Rebelde.<br/>Único - Solo uno por campeón.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/rebelmedal.png') }}"
+                         alt="Medalla rebelde" >
+                </a>
+            </div>
+            <div class="col-1 p-0"> </div>
+            <!-- Fila 8 -->
+            <div class="col-1 p-0"> </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-mr:+25" data-title="Capa Negatrón"
+                   data-popover-description="+25 Resistencia Mágica">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/negatroncloak.png') }}"
+                         alt="Capa Negatrón" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+sparringgloves_icon-mr:+25_icon-dg:+20%" data-title="Fajín"
+                   data-popover-description="El portador es inmune al control de adversario durante los primeros 10 s del combate.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/quicksilver.png') }}"
+                         alt="Fajín" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+bfsword_icon-ad:+15_icon-mr:+25" data-title="Sanguinaria"
+                   data-popover-description="Los ataques básicos curan al portador un 35% del daño infligido.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/bloodthirster.png') }}"
+                         alt="Sanguinaria" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+needlesslylargerod_icon-ap:+20%_icon-mr:+25" data-title="Chispa iónica"
+                   data-popover-description="Los enemigos situados a 2 hexágonos ven reducida su resistencia mágica un 50% (no se acumula). Cuando lanzan una habilidad, reciben una descarga de daño mágico equivalente al 225% de su maná máximo.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/ionicspark.png') }}"
+                         alt="Chispa iónica" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+recurvebow_icon-as:+15%_icon-mr:+25" data-title="Huracán de Runaan"
+                   data-popover-description="Los ataques básicos disparan un proyectil a otro enemigo cercano que inflige un 70% del daño de ataque del portador y aplica efectos de impacto.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/runaanshurricane.png') }}"
+                         alt="Huracán de Runaan" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+tearofthegoddess_icon-mana:+15_icon-mr:+25" data-title="Cáliz de favor"
+                   data-popover-description="Cuando el portador lanza una habilidad, restaura 10 de maná a los aliados que se encuentren a 2 hexágonos o menos de distancia y a sí mismo.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/chaliceoffavor.png') }}"
+                         alt="Cáliz de favor" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+chainvest_icon-ar:+25_icon-mr:+25" data-title="Rompeespadas"
+                   data-popover-description="Los ataques básicos del portador tienen una probabilidad del 25% de desarmar al objetivo durante 3 s, lo que le impide realizar ataques básicos.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/swordbreaker.png') }}"
+                         alt="Rompeespadas" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+negatroncloak_icon-mr:+50" data-title="Garra de dragón"
+                   data-popover-description="Reduce el daño mágico recibido en un 50%.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/dragonsclaw.png') }}"
+                         alt="Garra de dragón" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+giantsbelt_icon-mr:+25_icon-hp:+200" data-title="Céfiro"
+                   data-popover-description="Al comienzo del combate, el portador invoca un torbellino en el lado opuesto de la arena que impide al enemigo más cercano participar en el combate durante 5 s.<br/>Único - Solo uno por campeón.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/zephyr.png') }}"
+                         alt="Céfiro" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+negatroncloak_icon-mr:+25" data-title="Orbe celestial"
+                   data-popover-description="El portador obtiene el atributo Celestial.<br/>Único - Solo uno por campeón.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/celestialorb.png') }}"
+                         alt="Orbe celestial" >
+                </a>
+            </div>
+            <div class="col-1 p-0"> </div>
+            <!-- Fila 9 -->
+            <div class="col-1 p-0"> </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="icon-hp:+200" data-title="Cinturón de Gigante"
+                   data-popover-description="+200 Vida">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/giantsbelt.png') }}"
+                         alt="Cinturón de Gigante" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:giantsbelt+sparringgloves_icon-hp:+200_icon-dg:+20%" data-title="Garra Trampa"
+                   data-popover-description="Bloquea la primera habilidad enemiga que impacte contra el portador y aturde al enemigo que la lanzó durante 4 s.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/trapclaw.png') }}"
+                         alt="Garra Trampa" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:giantsbelt+bfsword_icon-ad:+15_icon-hp:+200" data-title="Heraldo de Zeke"
+                   data-popover-description="Al comienzo del combate, la velocidad de ataque del portador y todos los aliados que estén a 1 hexágonos de distancia en la misma fila aumenta un 30% durante el resto del combate.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/zekesherald.png') }}"
+                         alt="Heraldo de Zeke" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:giantsbelt+needlesslylargerod_icon-ap:+20%_icon-hp:+200" data-title="Morellonomicón"
+                   data-popover-description="Cuando el portador inflige daño con su habilidad, quema al objetivo, lo que le inflige un 27% de su vida máxima como daño verdadero a lo largo de 10 s y reduce un 50% su curación hasta que termine el efecto.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/morellonomicon.png') }}"
+                         alt="Morellonomicón" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:giantsbelt+recurvebow_icon-as:+15%_icon-hp:+200" data-title="Portal Zz'Rot"
+                   data-popover-description="Cuando el portador muere, emerge un avatar con 1000/2000/3000 ★ de vida para continuar la lucha.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/zzrotportal.png') }}"
+                         alt="Portal Zz'Rot" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:giantsbelt+tearofthegoddess_icon-mana:+15_icon-hp:+200" data-title="Redención"
+                   data-popover-description="Cuando el portador muere, los aliados se curan 800 de vida.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/redemption.png') }}"
+                         alt="Redención" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:giantsbelt+chainvest_icon-ar:+25_icon-hp:+200" data-title="Mejora roja"
+                   data-popover-description="Al impactar, los ataques básicos del portador queman al objetivo, lo que le inflige un 27% de su vida máxima como daño verdadero a lo largo de 10 s y reduce un 50% su curación hasta que termine el efecto.<br/>Único - Solo uno por campeón.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/redbuff.png') }}"
+                         alt="Mejora roja" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:negatroncloak+giantsbelt_icon-mr:+25_icon-hp:+200" data-title="Céfiro"
+                   data-popover-description="Al comienzo del combate, el portador invoca un torbellino en el lado opuesto de la arena que impide al enemigo más cercano participar en el combate durante 5 s.<br/>Único - Solo uno por campeón.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/zephyr.png') }}"
+                         alt="Céfiro" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:giantsbelt+giantsbelt_icon-hp:+400" data-title="Armadura de Warmog"
+                   data-popover-description="El portador regenera un 5% de la vida que le falte, pero no más de 150 por segundo.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/warmogsarmor.png') }}"
+                         alt="Armadura de Warmog" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+giantsbelt_icon-hp:+200" data-title="Coraza del protector"
+                   data-popover-description="El portador obtiene el atributo Protector.<br/>Único - Solo uno por campeón.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/protectorschestguard.png') }}"
+                         alt="Coraza del protector" >
+                </a>
+            </div>
+            <div class="col-1 p-0"> </div>
+            <!-- Fila 10 -->
+            <div class="col-1 p-0"> </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="" data-title="Espátula"
+                   data-popover-description="Tiene que hacer <i>algo</i>...">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/spatula.png') }}"
+                         alt="Espátula" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+sparringgloves_icon-dg:+10%_icon-cr:+10%" data-title="Corazón de la Estrella Oscura"
+                   data-popover-description="El portador obtiene el atributo Estrella oscura.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/darkstarsheart.png') }}"
+                         alt="Corazón de la Estrella Oscura" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+bfsword_icon-ad:+15" data-title="Hoja del rey arruinado"
+                   data-popover-description="El portador obtiene el atributo Espadachín.<br/>Único - Solo uno por campeón.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/bladeoftheruinedking.png') }}"
+                         alt="Hoja del rey arruinado" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+needlesslylargerod_icon-ap:+20%" data-title="Carga del pirotécnico"
+                   data-popover-description="El portador obtiene el atributo Pirotécnico.<br/>Único - Solo uno por campeón">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/demolitionistscharge.png') }}"
+                         alt="Carga del pirotécnico" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+recurvebow_icon-as:+15%" data-title="Garras del infiltrado"
+                   data-popover-description="El portador obtiene el atributo Infiltrado.<br/>Único - Solo uno por campeón">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/infiltratorstalons.png') }}"
+                         alt="Garras del infiltrado" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+tearofthegoddess_icon-mana:+15" data-title="Amuleto de las guardianas"
+                   data-popover-description="El portador obtiene el atributo Guardiana de las estrellas.<br/>Único - Solo uno por campeón">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/starguardianscharm.png') }}"
+                         alt="Amuleto de las guardianas" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+chainvest_icon-ar:+25" data-title="Medalla rebelde"
+                   data-popover-description="El portador obtiene el atributo Rebelde.<br/>Único - Solo uno por campeón.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/rebelmedal.png') }}"
+                         alt="Medalla rebelde" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+negatroncloak_icon-mr:+25" data-title="Orbe celestial"
+                   data-popover-description="El portador obtiene el atributo Celestial.<br/>Único - Solo uno por campeón.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/celestialorb.png') }}"
+                         alt="Orbe celestial" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+giantsbelt_icon-hp:+200" data-title="Coraza del protector"
+                   data-popover-description="El portador obtiene el atributo Protector.<br/>Único - Solo uno por campeón.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/protectorschestguard.png') }}"
+                         alt="Coraza del protector" >
+                </a>
+            </div>
+            <div class="col-1 p-1">
+                <a href="#" data-toggle="popover" data-placement="top"
+                   data-popover-content="no-icon:spatula+spatula" data-title="Fuerza de la naturaleza"
+                   data-popover-description="El tamaño máximo del equipo del portador aumenta en 1.">
+                    <img class="img-fluid rounded" src="{{ asset('img/tft/forceofnature.png') }}"
+                         alt="Fuerza de la naturaleza" >
+                </a>
+            </div>
+            <div class="col-1 p-0"> </div>
         </div>
     </div>
-    <div class="push my-4"/>
+    <div class="push my-4"></div>
 {% endblock %}
 {% block javascripts %}
     {{ parent() }}
     <script>
         $(document).ready(function () {
             $('[data-toggle="popover"]').popover({
-                //trigger: 'focus',
                 trigger: 'hover',
                 html: true,
                 content: function () {
-                    return $(this).data('data-content');
+                    let content = "";
+                    let data = $(this).attr("data-popover-content");
+                    if (data !== "") {
+                        let stats = data.split("_");
+                        for (let i = 0; i < stats.length; i++) {
+                            let splitted = stats[i].split(":");
+                            if (splitted[0] === "no-icon") {
+                                let items = splitted[1].split("+");
+                                content += '<img src="/img/tft/' + items[0] + '.png" width="30">'
+                                        + " + "
+                                        + '<img src="/img/tft/' + items[1] + '.png" width="30"><br/>';
+                            } else {
+                                content += '<img src="/img/stats/' + splitted[0] +
+                                        '.svg" width="20"> ' + splitted[1] + " ";
+                            }
+                        }
+                    }
+                    let description = $(this).attr("data-popover-description");
+                    content += (content !== "") ? '<br/>' : "";
+                    content += description;
+                    return content;
                 },
                 title: function () {
-                    return $(this).data('title');
+                    return $(this).attr('data-title');
                 }
-            })
+            });
         });
     </script>
 {% endblock %}

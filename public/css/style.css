@@ -320,3 +320,18 @@ footer div a:hover {
         width: 100%;
     }
 }
+
+
+/*********************************
+8. Popover (Bootstrap & Popper JS)
+*********************************/
+
+.popover, .popover-header, .popover-body {
+    background: #383838;
+    color: white;
+}
+
+.arrow:after {
+  border-top-color: #383838 !important;
+  border-bottom-color: #383838 !important;
+}
