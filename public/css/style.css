@@ -315,7 +315,7 @@ footer div a:hover {
     color: white;
 }
 
-@media (max-width:768px) {
+@media (max-width:769px) {
     .leader-card {
         width: 100%;
     }
@@ -332,6 +332,41 @@ footer div a:hover {
 }
 
 .arrow:after {
-  border-top-color: #383838 !important;
-  border-bottom-color: #383838 !important;
+    border-top-color: #383838 !important;
+    border-bottom-color: #383838 !important;
+}
+
+
+/*********************************
+9. TFT Ranking
+*********************************/
+
+.tft-leader {
+    border-radius: 0 !important;
+}
+
+.tft-ranking-card {
+    height: 300px;
+    margin-top: -360px;
+    z-index: -1;
+    padding-top: 20% !important;
+    border-radius: 0 !important;
+}
+
+@media (max-width:992px) {
+    .tft-ranking-card {
+        height: 250px;
+        margin-top: -300px;
+    }
+}
+
+@media (max-width:769px) {
+    .tft-ranking-card {
+        height: 250px;
+        margin-top: 10px;
+    }
+}
+
+.tft-ranking-card:hover {
+    z-index: 1;
 }

@@ -1,0 +1,31 @@
+{# tft/tft-rankData.html.twig #}
+<div class="row">
+    <h1 class="mt-3">Teamfight Tactics Ranking</h1>
+    <div class="col-12 mt-4 text-center">
+        <div class="row">
+            <div class="col-12 mb-3">
+                <div class="py-3 card border border-secondary bg-primary leader-card tft-leader shadow">
+                    <img src="{{ asset('img/penguin.svg') }}" class="img-fluid">
+                    <h5 style="color: white"><i class="fas fa-crown" style="color: #F5871F;"></i>
+                        {{ ranking.entries[0].summonerName }} - {{ ranking.entries[0].leaguePoints }} LP</h5>
+                    <p style="color:white">Wins : {{ ranking.entries[0].wins }} - Losses: {{ ranking.entries[0].losses }}</p>
+                </div>
+            </div>
+            <div class="row col-12 mx-auto pb-3 align-items-end">
+                <div class="col-md-4 col-12">
+                    <div class="card border border-secondary bg-success tft-ranking-card pl-4 text-left shadow">
+                        <h5 style="color:white">{{ ranking.entries[1].summonerName }} - {{ ranking.entries[1].leaguePoints }} LP</h5>
+                        <p style="color:white">Wins : {{ ranking.entries[1].wins }} - Losses: {{ ranking.entries[1].losses }}</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12"></div>
+                <div class="col-md-4 col-12">
+                    <div class="card border border-secondary bg-danger tft-ranking-card pr-4 text-right shadow">
+                        <h5 style="color:white">{{ ranking.entries[2].summonerName }} - {{ ranking.entries[2].leaguePoints }} LP</h5>
+                        <p style="color:white">Wins : {{ ranking.entries[2].wins }} - Losses: {{ ranking.entries[2].losses }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

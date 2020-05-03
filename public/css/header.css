@@ -153,7 +153,7 @@ nav {
 
 /* mobile view */
 
-@media (max-width:768px) {
+@media (max-width:769px) {
     .navbar-nav {
         background-color: #fff;
         border-top: 3px solid #b30000;
@@ -182,7 +182,7 @@ nav {
     }
 }
 
-@media (max-width:768px) {
+@media (max-width:769px) {
     .banner-text {
         padding: 150px 0 150px 0;
     }

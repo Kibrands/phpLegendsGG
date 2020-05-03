@@ -49,9 +49,14 @@ class LegendsGGController extends AbstractController {
         ]);
     }
 
-    function tftRank() {
+    function tftRank(Request $request) {
+        $server = $request->request->get('server');
+        if ($server == null) {
+            $server = 'na';
+        }
         return $this->render('tft/tft-rank.html.twig', [
-                    'active' => 'tft'
+                    'active' => 'tft',
+                    'server' => $server
         ]);
     }
 

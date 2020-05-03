@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use App\Entity\Server;
 use RiotAPI\LeagueAPI\LeagueAPI;
 
 class RankingController extends AbstractController {

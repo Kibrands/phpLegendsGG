@@ -1,3 +1,40 @@
 {# tft-rank.html.twig #}
 {% extends "base.html.twig" %}
 {% block title %}{{ parent() }}TFT - Ranking{% endblock %}
+{% block body %}
+    <div class="container main-container">
+        <div class="row">
+            <div class="col-12">
+                <form id="renderRanking" action="{{ path('ranking') }}" method="post">
+                    <div class="row">
+                        <div class="col-12 col-md-8">
+                            <select id="server" class="form-control" name="server" id="server">
+                                <option value="na" {% if server == 'na' %}selected{% endif %}>NA</option>
+                                <option value="euw" {% if server == 'euw' %}selected{% endif %}>EUW</option>
+                                <option value="eun" {% if server == 'eun' %}selected{% endif %}>EUN</option>
+                                <option value="br" {% if server == 'br' %}selected{% endif %}>Brazil</option>
+                                <option value="lan" {% if server == 'lan' %}selected{% endif %}>LAN</option>
+                                <option value="las" {% if server == 'las' %}selected{% endif %}>LAS</option>
+                                <option value="tr" {% if server == 'tr' %}selected{% endif %}>Turkey</option>
+                                <option value="ru" {% if server == 'ru' %}selected{% endif %}>Russia</option>
+                                <option value="oc" {% if server == 'oc' %}selected{% endif %}>Oceania</option>
+                                <option value="jp" {% if server == 'jp' %}selected{% endif %}>Japan</option>
+                                <option value="kr" {% if server == 'kr' %}selected{% endif %}>Korea</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <button type="submit" class="btn btn-dark btn-block"><i class="fas fa-search"></i> Buscar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12">
+                {{ render_hinclude(controller(
+                    'App\\Controller\\TeamfightTacticsController::renderRankingByServer',
+                    { 'server': server }
+                ),  {default: '<h4 class="mt-5 text-center">Loading...</h4>'}) }}
+            </div>
+        </div>
+        <div class="push"></div>
+    </div>
+{% endblock %}
