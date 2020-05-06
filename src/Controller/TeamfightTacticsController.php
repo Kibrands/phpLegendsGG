@@ -31,5 +31,5 @@ class TeamfightTacticsController extends AbstractController {
         return $this->render('tft/tft-rankData.html.twig',
                         ['ranking' => $tftLeague]);
     }
-
+    
 }

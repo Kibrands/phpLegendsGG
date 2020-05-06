@@ -1,3 +1,66 @@
 {# tft-comps.html.twig #}
 {% extends "base.html.twig" %}
 {% block title %}{{ parent() }}TFT - Composiciones{% endblock %}
+{% block body %}
+    <div class="container main-container">
+        <div class="row pt-5">
+            <h2 class="px-4">Composiciones TFT</h2>
+            {% for comp in comps %}
+                <div class="col-12 border border-secondary shadow bg-light p-0 mb-2">
+                    <nav class="navbar p-0">
+                        <a href="#" class="navbar-toggler w-100 p-3" type="button" data-toggle="collapse"
+                           data-target="#comp{{ comp.id }}" aria-controls="comp{{ comp.id }}"
+                           aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="row px-2">
+                                <div class="col-4 col-xs-12 col-sm-12 col-md-3"
+                                     style="align-self: center">
+                                    <div class="tft-comps-tier card {% if comp.tier == 'S' %}bg-primary{% elseif comp.tier == 'A' %}bg-success{% else %}bg-warning{% endif %} p-2 text-center cancell-invert"
+                                         style="width: 38px;">
+                                        <b class="text-white font-weight-bold">{{ comp.tier }}</b>
+                                    </div>
+                                </div>
+                                {% for champ in comp.champs %}
+                                    <div class="col-4 col-xs-4 col-sm-3 col-md-1 py-3">
+                                        <img class="img-fluid cancell-invert border border-{{ champ.border }} "
+                                             src="{{ asset('img/tft/champions/' ~ champ.image ~ '.png') }}"
+                                             alt="{{ champ.name }}">
+                                        {% if champ.stars == 'y' %}<div class="cancell-invert tft-champ-stars"></div>{% endif %}
+                                    </div>
+                                {% endfor %}
+                                <div style="align-self: center;" class="cancell-invert">&#9207;</div>
+                            </div>
+                        </a>
+                    </nav>
+                    <div class="collapse px-4" id="comp{{ comp.id }}">
+                        <div class="row px-5">
+                            <div class="col-12 col-sm-6 m-auto p-3 d-flex">
+                                <div class="row">
+                                    {% for trait in comp.traits %}
+                                        <div class="col p-1">
+                                            <div class="text-center hexagon-{{ trait.tier }} shadow">
+                                                <img src="{{ asset('img/tft/traits/' ~ trait.image ~ '.png') }}" alt="{{ trait.image }}">
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 m-auto px-2 py-3 d-flex">
+                                <div class="row">
+                                    <div class="col-12">Campeones tempranos</div>
+                                    {% for champ in comp.earlyChamps %}
+                                        <div class="col py-2">
+                                            <img class="border border-{{ champ.border }}"
+                                                 src="{{ asset('img/tft/champions/' ~ champ.image ~ '.png') }}"
+                                                 alt="{{ champ.name }}">
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="push"></div>
+    </div>
+{% endblock %}

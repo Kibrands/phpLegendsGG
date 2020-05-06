@@ -44,8 +44,12 @@ class LegendsGGController extends AbstractController {
     }
 
     function tftComps() {
+        $utilController = new UtilController();
+        $comps = $utilController->getCompositions();
         return $this->render('tft/tft-comps.html.twig', [
-                    'active' => 'tft'
+                    'active' => 'tft',
+                    'ddragon' => $_ENV['DDRAGON'],
+                    'comps' => $comps
         ]);
     }
 

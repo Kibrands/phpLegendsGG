@@ -370,3 +370,157 @@ footer div a:hover {
 .tft-ranking-card:hover {
     z-index: 1;
 }
+
+
+/*********************************
+10. TFT Composition
+*********************************/
+
+.composition-card {
+    border-radius: 0;
+}
+
+.cancell-invert {
+    filter: invert(0);
+}
+
+@media (max-width:769px) {
+    .cancell-invert {
+        filter: invert(1);
+    }
+}
+
+.tft-champ-stars:after {
+    content: "★★★";
+    color: #e4c157;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    font-size: 14px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 3px 3px #000;
+    letter-spacing: -3px;
+    margin-left: -1px;
+}
+
+.border-purple {
+    border-color: #e83e8c!important;
+}
+
+@media (max-width:575px) {
+    .tft-comps-tier {
+        margin: auto;
+        width: 70px!important;
+        height: 70px!important;
+    }
+
+    .tft-comps-tier b {
+        font-size: 2em;
+        margin: auto;
+    }
+}
+
+/* GOLD HEXAGON */
+
+.hexagon-gold {
+    position: relative;
+    width: 50px; 
+    height: 28.87px;
+    margin: 14.43px 0;
+    background: rgba(252,234,187,1);
+    background: -moz-linear-gradient(top, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 45%, rgba(248,182,0,1) 51%, rgba(204,150,0,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(252,234,187,1)), color-stop(45%, rgba(252,205,77,1)), color-stop(51%, rgba(248,182,0,1)), color-stop(100%, rgba(204,150,0,1)));
+    background: -webkit-linear-gradient(top, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 45%, rgba(248,182,0,1) 51%, rgba(204,150,0,1) 100%);
+    background: -o-linear-gradient(top, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 45%, rgba(248,182,0,1) 51%, rgba(204,150,0,1) 100%);
+    background: -ms-linear-gradient(top, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 45%, rgba(248,182,0,1) 51%, rgba(204,150,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 45%, rgba(248,182,0,1) 51%, rgba(204,150,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#cc9600', GradientType=0 );
+}
+
+.hexagon-gold:before,
+.hexagon-gold:after,
+.hexagon-bronze:before,
+.hexagon-bronze:after,
+.hexagon-silver:before,
+.hexagon-silver:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    left: 0 !important;
+}
+
+.hexagon-gold:before {
+    bottom: 100%;
+    border-bottom: 14.43px solid #fceabb;
+}
+
+.hexagon-gold:after {
+    top: 100%;
+    width: 0;
+    border-top: 14.43px solid #cc9600;
+}
+
+.hexagon-bronze {
+    position: relative;
+    width: 50px; 
+    height: 28.87px;
+    margin: 14.43px 0;
+    background: rgba(243,226,199,1);
+    background: -moz-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(182,141,76,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(243,226,199,1)), color-stop(50%, rgba(193,158,103,1)), color-stop(51%, rgba(182,141,76,1)), color-stop(100%, rgba(182,141,76,1)));
+    background: -webkit-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(182,141,76,1) 100%);
+    background: -o-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(182,141,76,1) 100%);
+    background: -ms-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(182,141,76,1) 100%);
+    background: linear-gradient(to bottom, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(182,141,76,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#b68d4c', GradientType=0 );
+}
+
+.hexagon-bronze:before {
+    bottom: 100%;
+    border-bottom: 14.43px solid #f3e2c7;
+}
+
+.hexagon-bronze:after {
+    top: 100%;
+    width: 0;
+    border-top: 14.43px solid #b68d4c;
+}
+
+.hexagon-bronze img,
+.hexagon-gold img,
+.hexagon-silver img{
+    width: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.hexagon-silver {
+    position: relative;
+    width: 50px; 
+    height: 28.87px;
+    margin: 14.43px 0;
+    background: rgba(232,232,232,1);
+    background: -moz-linear-gradient(top, rgba(232,232,232,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(181,198,208,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(232,232,232,1)), color-stop(50%, rgba(216,225,231,1)), color-stop(51%, rgba(181,198,208,1)), color-stop(100%, rgba(181,198,208,1)));
+    background: -webkit-linear-gradient(top, rgba(232,232,232,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(181,198,208,1) 100%);
+    background: -o-linear-gradient(top, rgba(232,232,232,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(181,198,208,1) 100%);
+    background: -ms-linear-gradient(top, rgba(232,232,232,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(181,198,208,1) 100%);
+    background: linear-gradient(to bottom, rgba(232,232,232,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(181,198,208,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#b5c6d0', GradientType=0 );
+}
+
+.hexagon-silver:before {
+    bottom: 100%;
+    border-bottom: 14.43px solid #e8e8e8;
+}
+
+.hexagon-silver:after {
+    top: 100%;
+    width: 0;
+    border-top: 14.43px solid #b5c6d0;
+}

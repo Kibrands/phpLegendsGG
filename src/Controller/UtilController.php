@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use RiotAPI\LeagueAPI\Definitions\Region;
+use Symfony\Component\Finder\Finder;
 
 class UtilController {
 
@@ -33,6 +34,17 @@ class UtilController {
             default:
                 return Region::NORTH_AMERICA;
         }
+    }
+
+    function getCompositions() {
+        $finder = new Finder();
+        $finder->files()->in(__DIR__)->name('tft-comps.json');
+
+        foreach ($finder as $file) {
+            $comps = json_decode(file_get_contents($file));
+        }
+        
+        return $comps;
     }
 
 }

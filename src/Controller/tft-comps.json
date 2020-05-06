@@ -1,0 +1,1894 @@
+[
+    {
+        "id": 1,
+        "tier": "S",
+        "traits": [
+            {
+                "image": "sorcerer",
+                "tier": "gold"
+            },
+            {
+                "image": "starguardian",
+                "tier": "bronze"
+            },
+            {
+                "image": "vanguard",
+                "tier": "bronze"
+            },
+            {
+                "image": "chrono",
+                "tier": "bronze"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Caitlyn",
+                "image": "caitlyn",
+                "border": "secondary"
+            },
+            {
+                "name": "Poppy",
+                "image": "poppy",
+                "border": "secondary"
+            },
+            {
+                "name": "Twisted Fate",
+                "image": "twistedfate",
+                "border": "secondary"
+            },
+            {
+                "name": "Zoe",
+                "image": "zoe",
+                "border": "secondary"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Poppy",
+                "image": "poppy",
+                "border": "secondary",
+                "stars": "y"
+            },
+            {
+                "name": "Twisted Fate",
+                "image": "twistedfate",
+                "border": "secondary",
+                "stars": "y"
+            },
+            {
+                "name": "Zoe",
+                "image": "zoe",
+                "border": "secondary",
+                "stars": "y"
+            },
+            {
+                "name": "Lux",
+                "image": "lux",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Syndra",
+                "image": "syndra",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Velkoz",
+                "image": "velkoz",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Wukong",
+                "image": "wukong",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Xerath",
+                "image": "xerath",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "tier": "S",
+        "traits": [
+            {
+                "image": "sniper",
+                "tier": "gold"
+            },
+            {
+                "image": "celestial",
+                "tier": "silver"
+            },
+            {
+                "image": "blademaster",
+                "tier": "bronze"
+            },
+            {
+                "image": "chrono",
+                "tier": "bronze"
+            },
+            {
+                "image": "protector",
+                "tier": "bronze"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Caitlyn",
+                "image": "caitlyn",
+                "border": "secondary"
+            },
+            {
+                "name": "Poppy",
+                "image": "poppy",
+                "border": "secondary"
+            },
+            {
+                "name": "Jarvan IV",
+                "image": "jarvaniv",
+                "border": "secondary"
+            },
+            {
+                "name": "Xayah",
+                "image": "xayah",
+                "border": "secondary"
+            },
+            {
+                "name": "Shen",
+                "image": "shen",
+                "border": "success"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Caitlyn",
+                "image": "caitlyn",
+                "border": "secondary",
+                "stars": "y"
+            },
+            {
+                "name": "Leona",
+                "image": "leona",
+                "border": "secondary",
+                "stars": "y"
+            },
+            {
+                "name": "Jarvan IV",
+                "image": "jarvaniv",
+                "border": "secondary",
+                "stars": "y"
+            },
+            {
+                "name": "Xayah",
+                "image": "xayah",
+                "border": "secondary",
+                "stars": "y"
+            },
+            {
+                "name": "Rakan",
+                "image": "rakan",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Shen",
+                "image": "shen",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Ashe",
+                "image": "ashe",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Kassadin",
+                "image": "kassadin",
+                "border": "primary",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "tier": "S",
+        "traits": [
+            {
+                "image": "blaster",
+                "tier": "gold"
+            },
+            {
+                "image": "brawler",
+                "tier": "gold"
+            },
+            {
+                "image": "mercenary",
+                "tier": "gold"
+            },
+            {
+                "image": "chrono",
+                "tier": "bronze"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Malphite",
+                "image": "malphite",
+                "border": "secondary"
+            },
+            {
+                "name": "Blitzcrank",
+                "image": "blitzcrank",
+                "border": "success"
+            },
+            {
+                "name": "Sona",
+                "image": "sona",
+                "border": "success"
+            },
+            {
+                "name": "Ezreal",
+                "image": "ezreal",
+                "border": "primary"
+            },
+            {
+                "name": "Jinx",
+                "image": "jinx",
+                "border": "purple"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Graves",
+                "image": "graves",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Malphite",
+                "image": "malphite",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Blitzcrank",
+                "image": "blitzcrank",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Ezreal",
+                "image": "ezreal",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Vi",
+                "image": "vi",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Cho'Gath",
+                "image": "chogath",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Jinx",
+                "image": "jinx",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Miss Fortune",
+                "image": "missfortune",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "tier": "S",
+        "traits": [
+            {
+                "image": "valkyrie",
+                "tier": "gold"
+            },
+            {
+                "image": "mercenary",
+                "tier": "gold"
+            },
+            {
+                "image": "chrono",
+                "tier": "silver"
+            },
+            {
+                "image": "blademaster",
+                "tier": "bronze"
+            },
+            {
+                "image": "celestial",
+                "tier": "bronze"
+            },
+            {
+                "image": "blaster",
+                "tier": "bronze"
+            }
+
+        ],
+        "earlyChamps": [
+            {
+                "name": "Fiora",
+                "image": "fiora",
+                "border": "secondary"
+            },
+            {
+                "name": "Leona",
+                "image": "leona",
+                "border": "secondary"
+            },
+            {
+                "name": "Lucian",
+                "image": "lucian",
+                "border": "success"
+            },
+            {
+                "name": "Ezreal",
+                "image": "ezreal",
+                "border": "primary"
+            },
+            {
+                "name": "Wukong",
+                "image": "wukong",
+                "border": "purple"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Xayah",
+                "image": "xayah",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Shen",
+                "image": "shen",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Ezreal",
+                "image": "ezreal",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Kassadin",
+                "image": "kassadin",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Kayle",
+                "image": "kayle",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Wukong",
+                "image": "wukong",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Miss Fortune",
+                "image": "missfortune",
+                "border": "warning",
+                "stars": "n"
+            },
+            {
+                "name": "Thresh",
+                "image": "thresh",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "tier": "S",
+        "traits": [
+            {
+                "image": "cybernetic",
+                "tier": "gold"
+            },
+            {
+                "image": "valkyrie",
+                "tier": "gold"
+            },
+            {
+                "image": "blademaster",
+                "tier": "bronze"
+            },
+            {
+                "image": "blaster",
+                "tier": "bronze"
+            },
+            {
+                "image": "infiltrator",
+                "tier": "bronze"
+            }
+
+        ],
+        "earlyChamps": [
+            {
+                "name": "Fiora",
+                "image": "fiora",
+                "border": "secondary"
+            },
+            {
+                "name": "Blitzcrank",
+                "image": "blitzcrank",
+                "border": "success"
+            },
+            {
+                "name": "Shen",
+                "image": "shen",
+                "border": "success"
+            },
+            {
+                "name": "Ezreal",
+                "image": "ezreal",
+                "border": "primary"
+            },
+            {
+                "name": "Irelia",
+                "image": "irelia",
+                "border": "purple"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Leona",
+                "image": "leona",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Firoa",
+                "image": "fiora",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Lucian",
+                "image": "lucian",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Vi",
+                "image": "vi",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Irelia",
+                "image": "irelia",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Kayle",
+                "image": "kayle",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Ekko",
+                "image": "ekko",
+                "border": "warning",
+                "stars": "n"
+            },
+            {
+                "name": "Miss Fortune",
+                "image": "missfortune",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "tier": "S",
+        "traits": [
+            {
+                "image": "mechpilot",
+                "tier": "gold"
+            },
+            {
+                "image": "valkyrie",
+                "tier": "gold"
+            },
+            {
+                "image": "demolitionist",
+                "tier": "gold"
+            },
+            {
+                "image": "infiltrator",
+                "tier": "silver"
+            },
+            {
+                "image": "sorcerer",
+                "tier": "bronze"
+            }
+
+        ],
+        "earlyChamps": [
+            {
+                "name": "Ziggs",
+                "image": "ziggs",
+                "border": "secondary"
+            },
+            {
+                "name": "Annie",
+                "image": "annie",
+                "border": "success"
+            },
+            {
+                "name": "Rumble",
+                "image": "rumble",
+                "border": "primary"
+            },
+            {
+                "name": "Shaco",
+                "image": "shaco",
+                "border": "primary"
+            },
+            {
+                "name": "Fizz",
+                "image": "fizz",
+                "border": "purple"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Annie",
+                "image": "annie",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Kaisa",
+                "image": "kaisa",
+                "border": "success",
+                "stars": "y"
+            },
+            {
+                "name": "Lux",
+                "image": "lux",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Rumble",
+                "image": "rumble",
+                "border": "primary",
+                "stars": "y"
+            },
+            {
+                "name": "Shaco",
+                "image": "shaco",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Fizz",
+                "image": "fizz",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Kayle",
+                "image": "kayle",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Ekko",
+                "image": "ekko",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "tier": "S",
+        "traits": [
+            {
+                "image": "sniper",
+                "tier": "gold"
+            },
+            {
+                "image": "mana-reaver",
+                "tier": "gold"
+            },
+            {
+                "image": "celestial",
+                "tier": "silver"
+            },
+            {
+                "image": "spacepirate",
+                "tier": "bronze"
+            },
+            {
+                "image": "protector",
+                "tier": "bronze"
+            },
+            {
+                "image": "vanguard",
+                "tier": "bronze"
+            }
+
+        ],
+        "earlyChamps": [
+            {
+                "name": "Poppy",
+                "image": "poppy",
+                "border": "secondary"
+            },
+            {
+                "name": "Darius",
+                "image": "darius",
+                "border": "success"
+            },
+            {
+                "name": "Mordekaiser",
+                "image": "mordekaiser",
+                "border": "success"
+            },
+            {
+                "name": "Jayce",
+                "image": "jayce",
+                "border": "primary"
+            },
+            {
+                "name": "Wukong",
+                "image": "wukong",
+                "border": "purple"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Darius",
+                "image": "darius",
+                "border": "success",
+                "stars": "y"
+            },
+            {
+                "name": "Rakan",
+                "image": "rakan",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Xin Zhao",
+                "image": "xinzhao",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Ashe",
+                "image": "ashe",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Jayce",
+                "image": "jayce",
+                "border": "primary",
+                "stars": "y"
+            },
+            {
+                "name": "Kassadin",
+                "image": "kassadin",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Jhin",
+                "image": "jhin",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Wukong",
+                "image": "wukong",
+                "border": "purple",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "tier": "A",
+        "traits": [
+            {
+                "image": "sniper",
+                "tier": "gold"
+            },
+            {
+                "image": "darkstar",
+                "tier": "silver"
+            },
+            {
+                "image": "celestial",
+                "tier": "bronze"
+            },
+            {
+                "image": "mystic",
+                "tier": "bronze"
+            },
+            {
+                "image": "sorcerer",
+                "tier": "bronze"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Leona",
+                "image": "leona",
+                "border": "secondary"
+            },
+            {
+                "name": "Poppy",
+                "image": "poppy",
+                "border": "secondary"
+            },
+            {
+                "name": "Mordekaiser",
+                "image": "mordekaiser",
+                "border": "success"
+            },
+            {
+                "name": "Jayce",
+                "image": "jayce",
+                "border": "primary"
+            },
+            {
+                "name": "Jhin",
+                "image": "jhin",
+                "border": "purple"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Jarvan IV",
+                "image": "jarvaniv",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Ashe",
+                "image": "ashe",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Karma",
+                "image": "karma",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Lux",
+                "image": "lux",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Shaco",
+                "image": "shaco",
+                "border": "primary",
+                "stars": "y"
+            },
+            {
+                "name": "Jhin",
+                "image": "jhin",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Lulu",
+                "image": "lulu",
+                "border": "warning",
+                "stars": "n"
+            },
+            {
+                "name": "Xerath",
+                "image": "xerath",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "tier": "A",
+        "traits": [
+            {
+                "image": "mystic",
+                "tier": "gold"
+            },
+            {
+                "image": "protector",
+                "tier": "silver"
+            },
+            {
+                "image": "celestial",
+                "tier": "silver"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Jarvan IV",
+                "image": "jarvaniv",
+                "border": "secondary"
+            },
+            {
+                "name": "Rakan",
+                "image": "rakan",
+                "border": "success"
+            },
+            {
+                "name": "Xin Zhao",
+                "image": "xinzhao",
+                "border": "success"
+            },
+            {
+                "name": "Neeko",
+                "image": "neeko",
+                "border": "primary"
+            },
+            {
+                "name": "Karma",
+                "image": "karma",
+                "border": "primary"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Jarvan IV",
+                "image": "jarvaniv",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Rakan",
+                "image": "rakan",
+                "border": "success",
+                "stars": "y"
+            },
+            {
+                "name": "Sona",
+                "image": "sona",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Xin Zhao",
+                "image": "xinzhao",
+                "border": "success",
+                "stars": "y"
+            },
+            {
+                "name": "Karma",
+                "image": "karma",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Neeko",
+                "image": "neeko",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Soraka",
+                "image": "soraka",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Lulu",
+                "image": "lulu",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "tier": "A",
+        "traits": [
+            {
+                "image": "demolitionist",
+                "tier": "gold"
+            },
+            {
+                "image": "mercenary",
+                "tier": "gold"
+            },
+            {
+                "image": "starship",
+                "tier": "gold"
+            },
+            {
+                "image": "rebel",
+                "tier": "silver"
+            },
+            {
+                "image": "blaster",
+                "tier": "bronze"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Malphite",
+                "image": "malphite",
+                "border": "secondary"
+            },
+            {
+                "name": "Blitzcrank",
+                "image": "blitzcrank",
+                "border": "success"
+            },
+            {
+                "name": "Sona",
+                "image": "sona",
+                "border": "success"
+            },
+            {
+                "name": "Ezreal",
+                "image": "ezreal",
+                "border": "primary"
+            },
+            {
+                "name": "Jinx",
+                "image": "jinx",
+                "border": "purple"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Malphite",
+                "image": "malphite",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Ziggs",
+                "image": "ziggs",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Yasuo",
+                "image": "yasuo",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Master Yi",
+                "image": "masteryi",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Jinx",
+                "image": "jinx",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Aurelion Sol",
+                "image": "aurelionsol",
+                "border": "warning",
+                "stars": "n"
+            },
+            {
+                "name": "Gangplank",
+                "image": "gangplank",
+                "border": "warning",
+                "stars": "n"
+            },
+            {
+                "name": "Miss Fortune",
+                "image": "missfortune",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "tier": "A",
+        "traits": [
+            {
+                "image": "starguardian",
+                "tier": "gold"
+            },
+            {
+                "image": "sorcerer",
+                "tier": "gold"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Poppy",
+                "image": "poppy",
+                "border": "secondary"
+            },
+            {
+                "name": "Zoe",
+                "image": "zoe",
+                "border": "secondary"
+            },
+            {
+                "name": "Ahri",
+                "image": "ahri",
+                "border": "success"
+            },
+            {
+                "name": "Annie",
+                "image": "annie",
+                "border": "success"
+            },
+            {
+                "name": "Syndra",
+                "image": "syndra",
+                "border": "primary"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Zoe",
+                "image": "zoe",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Ahri",
+                "image": "ahri",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Lux",
+                "image": "lux",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Neeko",
+                "image": "neeko",
+                "border": "primary",
+                "stars": "y"
+            },
+            {
+                "name": "Syndra",
+                "image": "syndra",
+                "border": "primary",
+                "stars": "y"
+            },
+            {
+                "name": "Soraka",
+                "image": "soraka",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Vel'Koz",
+                "image": "velkoz",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Xerath",
+                "image": "xerath",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "tier": "A",
+        "traits": [
+            {
+                "image": "vanguard",
+                "tier": "gold"
+            },
+            {
+                "image": "sniper",
+                "tier": "gold"
+            },
+            {
+                "image": "darkstar",
+                "tier": "bronze"
+            },
+            {
+                "image": "celestial",
+                "tier": "bronze"
+            },
+            {
+                "image": "mystic",
+                "tier": "bronze"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Mordekaiser",
+                "image": "mordekaiser",
+                "border": "success"
+            },
+            {
+                "name": "Ashe",
+                "image": "ashe",
+                "border": "primary"
+            },
+            {
+                "name": "Jayce",
+                "image": "jayce",
+                "border": "primary"
+            },
+            {
+                "name": "Karma",
+                "image": "karma",
+                "border": "primary"
+            },
+            {
+                "name": "Jhin",
+                "image": "jhin",
+                "border": "purple"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Poppy",
+                "image": "poppy",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Mordekaiser",
+                "image": "mordekaiser",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Ashe",
+                "image": "ashe",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Jayce",
+                "image": "jayce",
+                "border": "primary",
+                "stars": "y"
+            },
+            {
+                "name": "Karma",
+                "image": "karma",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Jhin",
+                "image": "jhin",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Wukong",
+                "image": "wukong",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Lulu",
+                "image": "lulu",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "tier": "B",
+        "traits": [
+            {
+                "image": "chrono",
+                "tier": "gold"
+            },
+            {
+                "image": "sniper",
+                "tier": "gold"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Caitlyn",
+                "image": "caitlyn",
+                "border": "secondary"
+            },
+            {
+                "name": "Blitzcrank",
+                "image": "blitzcrank",
+                "border": "success"
+            },
+            {
+                "name": "Shen",
+                "image": "shen",
+                "border": "success"
+            },
+            {
+                "name": "Ashe",
+                "image": "ashe",
+                "border": "primary"
+            },
+            {
+                "name": "Wukong",
+                "image": "wukong",
+                "border": "purple"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Caitlyn",
+                "image": "caitlyn",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Blitzcrank",
+                "image": "blitzcrank",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Shen",
+                "image": "shen",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Ashe",
+                "image": "ashe",
+                "border": "primary",
+                "stars": "y"
+            },
+            {
+                "name": "Ezreal",
+                "image": "ezreal",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Jhin",
+                "image": "jhin",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Wukong",
+                "image": "wukong",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Thresh",
+                "image": "thresh",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "tier": "B",
+        "traits": [
+            {
+                "image": "sorcerer",
+                "tier": "gold"
+            },
+            {
+                "image": "mechpilot",
+                "tier": "gold"
+            },
+            {
+                "image": "starguardian",
+                "tier": "bronze"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Ziggs",
+                "image": "ziggs",
+                "border": "secondary"
+            },
+            {
+                "name": "Ahri",
+                "image": "ahri",
+                "border": "success"
+            },
+            {
+                "name": "Annie",
+                "image": "annie",
+                "border": "success"
+            },
+            {
+                "name": "Rumble",
+                "image": "rumble",
+                "border": "primary"
+            },
+            {
+                "name": "Fizz",
+                "image": "fizz",
+                "border": "purple"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Zoe",
+                "image": "zoe",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Ahri",
+                "image": "ahri",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Annie",
+                "image": "annie",
+                "border": "success",
+                "stars": "y"
+            },
+            {
+                "name": "Rumble",
+                "image": "rumble",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Syndra",
+                "image": "syndra",
+                "border": "primary",
+                "stars": "y"
+            },
+            {
+                "name": "Fizz",
+                "image": "fizz",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Vel'Koz",
+                "image": "velkoz",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Xerath",
+                "image": "xerath",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "tier": "B",
+        "traits": [
+            {
+                "image": "protector",
+                "tier": "silver"
+            },
+            {
+                "image": "infiltrator",
+                "tier": "silver"
+            },
+            {
+                "image": "darkstar",
+                "tier": "bronze"
+            },
+            {
+                "image": "celestial",
+                "tier": "bronze"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Jarvan IV",
+                "image": "jarvaniv",
+                "border": "secondary"
+            },
+            {
+                "name": "Rakan",
+                "image": "rakan",
+                "border": "success"
+            },
+            {
+                "name": "Xin Zhao",
+                "image": "xinzhao",
+                "border": "success"
+            },
+            {
+                "name": "Neeko",
+                "image": "neeko",
+                "border": "primary"
+            },
+            {
+                "name": "Karma",
+                "image": "karma",
+                "border": "primary"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Jarvan IV",
+                "image": "jarvaniv",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Kaisa",
+                "image": "kaisa",
+                "border": "success",
+                "stars": "y"
+            },
+            {
+                "name": "Rakan",
+                "image": "rakan",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Xin Zhao",
+                "image": "xinzhao",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Karma",
+                "image": "karma",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Shaco",
+                "image": "shaco",
+                "border": "primary",
+                "stars": "y"
+            },
+            {
+                "name": "Fizz",
+                "image": "fizz",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Ekko",
+                "image": "ekko",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "tier": "B",
+        "traits": [
+            {
+                "image": "mystic",
+                "tier": "gold"
+            },
+            {
+                "image": "rebel",
+                "tier": "bronze"
+            },
+            {
+                "image": "blademaster",
+                "tier": "bronze"
+            },
+            {
+                "image": "chrono",
+                "tier": "bronze"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Malphite",
+                "image": "malphite",
+                "border": "secondary"
+            },
+            {
+                "name": "Blitzcrank",
+                "image": "blitzcrank",
+                "border": "success"
+            },
+            {
+                "name": "Shen",
+                "image": "shen",
+                "border": "success"
+            },
+            {
+                "name": "Yasuo",
+                "image": "yasuo",
+                "border": "success"
+            },
+            {
+                "name": "Master Yi",
+                "image": "masteryi",
+                "border": "primary"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Blitzcrank",
+                "image": "blitzcrank",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Shen",
+                "image": "shen",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Sona",
+                "image": "sona",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Yasuo",
+                "image": "yasuo",
+                "border": "success",
+                "stars": "y"
+            },
+            {
+                "name": "Karma",
+                "image": "karma",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Master Yi",
+                "image": "masteryi",
+                "border": "primary",
+                "stars": "y"
+            },
+            {
+                "name": "Soraka",
+                "image": "soraka",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Lulu",
+                "image": "lulu",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "tier": "B",
+        "traits": [
+            {
+                "image": "spacepirate",
+                "tier": "gold"
+            },
+            {
+                "image": "vanguard",
+                "tier": "gold"
+            },
+            {
+                "image": "mercenary",
+                "tier": "gold"
+            },
+            {
+                "image": "blaster",
+                "tier": "bronze"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Poppy",
+                "image": "poppy",
+                "border": "secondary"
+            },
+            {
+                "name": "Darius",
+                "image": "darius",
+                "border": "success"
+            },
+            {
+                "name": "Mordekaiser",
+                "image": "mordekaiser",
+                "border": "success"
+            },
+            {
+                "name": "Jayce",
+                "image": "jayce",
+                "border": "primary"
+            },
+            {
+                "name": "Wukong",
+                "image": "wukong",
+                "border": "purple"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Graves",
+                "image": "graves",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Leona",
+                "image": "leona",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Darius",
+                "image": "darius",
+                "border": "success",
+                "stars": "y"
+            },
+            {
+                "name": "Mordekaiser",
+                "image": "mordekaiser",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Jayce",
+                "image": "jayce",
+                "border": "primary",
+                "stars": "y"
+            },
+            {
+                "name": "Wukong",
+                "image": "wukong",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Gangplank",
+                "image": "gangplank",
+                "border": "warning",
+                "stars": "n"
+            },
+            {
+                "name": "Miss Fortune",
+                "image": "missfortune",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "tier": "B",
+        "traits": [
+            {
+                "image": "vanguard",
+                "tier": "gold"
+            },
+            {
+                "image": "mystic",
+                "tier": "gold"
+            },
+            {
+                "image": "darkstar",
+                "tier": "bronze"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Poppy",
+                "image": "poppy",
+                "border": "secondary"
+            },
+            {
+                "name": "Darius",
+                "image": "darius",
+                "border": "success"
+            },
+            {
+                "name": "Mordekaiser",
+                "image": "mordekaiser",
+                "border": "success"
+            },
+            {
+                "name": "Jayce",
+                "image": "jayce",
+                "border": "primary"
+            },
+            {
+                "name": "Wukong",
+                "image": "wukong",
+                "border": "purple"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Poppy",
+                "image": "poppy",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Mordekaiser",
+                "image": "mordekaiser",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Sona",
+                "image": "sona",
+                "border": "success",
+                "stars": "n"
+            },
+            {
+                "name": "Jayce",
+                "image": "jayce",
+                "border": "primary",
+                "stars": "y"
+            },
+            {
+                "name": "Karma",
+                "image": "karma",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Soraka",
+                "image": "soraka",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Wukong",
+                "image": "wukong",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Lulu",
+                "image": "lulu",
+                "border": "warning",
+                "stars": "n"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "tier": "B",
+        "traits": [
+            {
+                "image": "brawler",
+                "tier": "gold"
+            },
+            {
+                "image": "void",
+                "tier": "gold"
+            },
+            {
+                "image": "chrono",
+                "tier": "bronze"
+            },
+            {
+                "image": "sorcerer",
+                "tier": "bronze"
+            }
+        ],
+        "earlyChamps": [
+            {
+                "name": "Malphite",
+                "image": "malphite",
+                "border": "secondary"
+            },
+            {
+                "name": "Twisted Fate",
+                "image": "twistedfate",
+                "border": "secondary"
+            },
+            {
+                "name": "Blitzcrank",
+                "image": "blitzcrank",
+                "border": "success"
+            },
+            {
+                "name": "Vi",
+                "image": "vi",
+                "border": "primary"
+            },
+            {
+                "name": "Cho'Gath",
+                "image": "chogath",
+                "border": "purple"
+            }
+        ],
+        "champs": [
+            {
+                "name": "Kha'Zix",
+                "image": "khazix",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Malphite",
+                "image": "malphite",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Twisted Fate",
+                "image": "twistedfate",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Blitzcrank",
+                "image": "blitzcrank",
+                "border": "secondary",
+                "stars": "n"
+            },
+            {
+                "name": "Vi",
+                "image": "vi",
+                "border": "primary",
+                "stars": "n"
+            },
+            {
+                "name": "Cho'Gath",
+                "image": "chogath",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Cho'Gath",
+                "image": "chogath",
+                "border": "purple",
+                "stars": "n"
+            },
+            {
+                "name": "Vel'Koz",
+                "image": "velkoz",
+                "border": "purple",
+                "stars": "n"
+            }
+        ]
+    }
+]
