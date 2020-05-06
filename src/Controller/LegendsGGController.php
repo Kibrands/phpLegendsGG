@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use RiotAPI\LeagueAPI\LeagueAPI;
+use Symfony\Component\Finder\Finder;
 
 class LegendsGGController extends AbstractController {
 
@@ -32,8 +33,16 @@ class LegendsGGController extends AbstractController {
     }
 
     function lolEsports() {
+        $finder = new Finder();
+        $finder->files()->in(__DIR__)->name('lolesports-news.json');
+
+        foreach ($finder as $file) {
+            $news = json_decode(file_get_contents($file));
+        }
+        
         return $this->render('lol-esports.html.twig', [
-                    'active' => 'lol-esports'
+                    'active' => 'lol-esports',
+                    'news' => $news
         ]);
     }
 

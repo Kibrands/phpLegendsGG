@@ -1,3 +1,57 @@
 {# lol-esports.html.twig #}
 {% extends "base.html.twig" %}
 {% block title %}{{ parent() }}LoL e-Sports{% endblock %}
+{% block body %}
+    <div class="container main-container">
+        <div class="row pt-5">
+            <div class="col-12">
+                <h2 class="px-4">Noticias LoL e-Sports</h2>
+            </div>
+            {% for new in news %}
+                <div class="col-12 col-xs-6 col-sm-4 mb-4">
+                    <div class="card p-0">
+                        <a class="card-img-top img-hover-zoom" href="{{ new.content }}" target="_blank">
+                            <img class="img-fluid new-cover" src="{{ new.poster }}">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ new.title }}</h5>
+                            {% set diferencia = date(new.date).diff(date('now')) %}
+                            {% set anyosDiferencia = diferencia.y %}
+                            <span class="text-muted">
+                                {% if anyosDiferencia == 0 %}
+                                    {% set mesesDiferencia = diferencia.m %}
+                                    {% if mesesDiferencia == 0 %}
+                                        {% set diasDiferencia = diferencia.days %}
+                                        {% if diasDiferencia >= 7 %}
+                                            {% set semanasDiferencia = diasDiferencia//7 %}
+                                            {% if semanasDiferencia == 1 %}
+                                                Hace 1 semana
+                                            {% else %}
+                                                Hace {{ semanasDiferencia }} semanas
+                                            {% endif %}
+                                        {% elseif diasDiferencia == 1 %}
+                                            Hace 1 día
+                                        {% elseif diasDiferencia == 0 %}
+                                            Hoy
+                                        {% else %}
+                                            Hace {{ diasDiferencia }} días
+                                        {% endif %}
+                                    {% elseif mesesDiferencia == 1%}
+                                        Hace 1 mes
+                                    {% else %}
+                                        Hace {{ mesesDiferencia }} meses
+                                    {% endif %}
+                                {% elseif anyosDiferencia == 1 %}
+                                    Hace 1 a&ntilde;o
+                                {% else %}
+                                    Hace {{ anyosDiferencia }} a&ntilde;os
+                                {% endif %}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="push"></div>
+    </div>
+{% endblock %}

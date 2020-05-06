@@ -5,7 +5,7 @@
 {% endblock %}
 {% block body %}
     <div class="container main-container text-center">
-        <h2 class="{% if icon == "check" %}text-success{% else %}text-danger{% endif %}">
+        <h2 class="{% if icon == "check" %}text-success{% else %}text-danger{% endif %} mt-2">
             <i class="fas fa-{{ icon }}"></i>
             {{ message }}
         </h2>

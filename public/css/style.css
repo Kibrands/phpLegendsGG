@@ -524,3 +524,50 @@ footer div a:hover {
     width: 0;
     border-top: 14.43px solid #b5c6d0;
 }
+
+
+/*********************************
+11. LoL e-Sports
+*********************************/
+
+.new-cover {
+    float:  left!important;
+    width: 700px!important;
+    height: 200px!important;
+    background-size: cover!important;
+    transition: transform .4s;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+}
+
+@media (max-width:991px) {
+    .new-cover {
+        height: 150px!important;
+    }
+}
+
+@media (max-width:768px) {
+    .new-cover {
+        height: 125px!important;
+    }
+}
+
+@media (max-width:576px) {
+    .new-cover {
+        height: 200px!important;
+    }
+}
+
+.img-hover-zoom {
+    overflow: hidden;
+}
+
+.img-hover-zoom img {
+    transition: transform .5s ease;
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.2);
+    filter: blur(0);
+    -webkit-filter: blur(0);
+}
