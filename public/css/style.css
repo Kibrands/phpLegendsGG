@@ -343,6 +343,12 @@ footer div a:hover {
 
 .tft-leader {
     border-radius: 0 !important;
+    -webkit-clip-path: polygon(75% 0, 100% 25%, 100% 100%, 25% 100%, 0 75%, 0 0);
+    clip-path: polygon(75% 0, 100% 25%, 100% 100%, 25% 100%, 0 75%, 0 0);
+}
+
+.tft-leader:after {
+
 }
 
 .tft-ranking-card {

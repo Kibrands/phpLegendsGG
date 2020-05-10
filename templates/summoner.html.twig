@@ -48,7 +48,7 @@
             </div>
             {% for match in matches.matches %}
                 <div class="col-12 border border-dark shadow mt-1 bg-light">
-                    <div class="py-3 h4">
+                    <div class="py-3 h4" style="font-size: 1rem;">
                         <div class="row">
                             <div class="col-2">
                                 <img alt="{{ render(controller(
@@ -59,10 +59,7 @@
                                     { 'api': api,'key': match.champion }
                                 )) ~ '.png' }}" width="80px" >
                             </div>
-                            <div class="col-7">
-                                {{ match.timestamp }} - {{ match.lane }}
-                            </div>
-                            <div class="col-3">
+                            <div class="col-10">
                                 {{ render_hinclude(controller(
                                     'App\\Controller\\MatchController::getMatchData',
                                     { 'server': server, 'matchId': match.gameId }

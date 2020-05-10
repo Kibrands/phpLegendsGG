@@ -1,2 +1,13 @@
 {# match/matchData.html.twig #}
-{{ matchData.gameId }} - {{ matchData.gameMode }}
+{% if matchData.gameMode == 'CLASSIC' %}
+    Grieta del invocador
+{% elseif matchData.gameMode == 'ONEFORALL' %}
+    One For All
+{% else %}
+    {{ matchData.gameMode }}
+{% endif %}
+<br/>
+{% set secs = matchData.gameDuration % 60 %}
+<span class="text-muted">
+    {{ matchData.gameDuration // 60 }}:{% if secs >= 10 %}{{ secs }}{% else %}0{{ secs }}{% endif %}
+</span>
