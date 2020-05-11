@@ -577,3 +577,14 @@ footer div a:hover {
     filter: blur(0);
     -webkit-filter: blur(0);
 }
+
+
+/*********************************
+12. Summoner
+*********************************/
+
+.right-chevron {
+    width: 7rem;
+    -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}

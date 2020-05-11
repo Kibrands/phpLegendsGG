@@ -1,13 +1,143 @@
 {# match/matchData.html.twig #}
-{% if matchData.gameMode == 'CLASSIC' %}
-    Grieta del invocador
-{% elseif matchData.gameMode == 'ONEFORALL' %}
-    One For All
-{% else %}
-    {{ matchData.gameMode }}
-{% endif %}
-<br/>
-{% set secs = matchData.gameDuration % 60 %}
-<span class="text-muted">
-    {{ matchData.gameDuration // 60 }}:{% if secs >= 10 %}{{ secs }}{% else %}0{{ secs }}{% endif %}
-</span>
+<div class="row">
+    <div class="col">
+        {% if matchData.gameMode == 'CLASSIC' %}
+            Grieta del invocador
+        {% elseif matchData.gameMode == 'ONEFORALL' %}
+            One For All
+        {% else %}
+            {{ matchData.gameMode }}
+        {% endif %}
+        <br/>
+        {% set secs = matchData.gameDuration % 60 %}
+        <span class="text-muted">
+            {{ matchData.gameDuration // 60 }}:{% if secs >= 10 %}{{ secs }}{% else %}0{{ secs }}{% endif %}
+        </span>
+        {% for participantIdentity in matchData.participantIdentities %}
+            {% if participantIdentity.player.accountId == accountId %}
+                {% for participant in matchData.participants %}
+                    {% if participant.participantId == participantIdentity.participantId %}
+                        <br/>
+                        <img alt="{{ render(controller(
+                            'App\\Controller\\MatchController::getSpellImage',
+                            { 'server': server,'spellId': participant.spell1Id }
+                        )) }}" src="{{ ddragon ~ lol_patch ~ '/img/spell/Summoner' ~  render(controller(
+                            'App\\Controller\\MatchController::getSpellImage',
+                            { 'server': server,'spellId': participant.spell1Id }
+                        )) ~ '.png' }}" width="50px">
+                        <img alt="{{ render(controller(
+                            'App\\Controller\\MatchController::getSpellImage',
+                            { 'server': server,'spellId': participant.spell2Id }
+                        )) }}" src="{{ ddragon ~ lol_patch ~ '/img/spell/Summoner' ~  render(controller(
+                            'App\\Controller\\MatchController::getSpellImage',
+                            { 'server': server,'spellId': participant.spell2Id }
+                        )) ~ '.png' }}" width="50px">
+                        <br/>
+                        {% if participant.teamId == 100 %}
+                            {% set win = matchData.teams[0].win %}
+                        {% else %}
+                            {% set win = matchData.teams[1].win %}
+                        {% endif %}
+                        {% if win == 'Win' %}
+                            <div class="bg-success text-center text-white text-bold p-3 mt-2 right-chevron">Win</div>
+                        {% elseif win == 'Fail' %}
+                            <div class="bg-danger text-center text-white text-bold p-3 mt-2 right-chevron">Lose</div>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="col">
+        {% for participantIdentity in matchData.participantIdentities %}
+            {% if participantIdentity.player.accountId == accountId %}
+                {% for participant in matchData.participants %}
+                    {% if participant.participantId == participantIdentity.participantId %}
+                        <!-- Item 0 -->
+                        {% if participant.stats.item0 == 0 %}
+                            <img alt="No Item" class="rounded" width="50" src="{{ asset('img/no-item.png') }}">
+                        {% else %}
+                            <img alt="{{ participant.stats.item0 }}" class="rounded" width="50"
+                                 src="{{ ddragon ~ lol_patch ~ '/img/item/' ~ participant.stats.item0 ~ '.png' }}">
+                        {% endif %}
+                        <!-- Item 1 -->
+                        {% if participant.stats.item1 == 0 %}
+                            <img alt="No Item" class="rounded" width="50" src="{{ asset('img/no-item.png') }}">
+                        {% else %}
+                            <img alt="{{ participant.stats.item1 }}" class="rounded" width="50"
+                                 src="{{ ddragon ~ lol_patch ~ '/img/item/' ~ participant.stats.item1 ~ '.png' }}">
+                        {% endif %}
+                        <!-- Item 2 -->
+                        {% if participant.stats.item2 == 0 %}
+                            <img alt="No Item" class="rounded" width="50" src="{{ asset('img/no-item.png') }}">
+                        {% else %}
+                            <img alt="{{ participant.stats.item2 }}" class="rounded" width="50"
+                                 src="{{ ddragon ~ lol_patch ~ '/img/item/' ~ participant.stats.item2 ~ '.png' }}">
+                        {% endif %}
+                        <!-- Item 3 -->
+                        {% if participant.stats.item3 == 0 %}
+                            <img alt="No Item" class="rounded" width="50" src="{{ asset('img/no-item.png') }}">
+                        {% else %}
+                            <img alt="{{ participant.stats.item3 }}" class="rounded" width="50"
+                                 src="{{ ddragon ~ lol_patch ~ '/img/item/' ~ participant.stats.item3 ~ '.png' }}">
+                        {% endif %}
+                        <!-- Item 4 -->
+                        {% if participant.stats.item4 == 0 %}
+                            <img alt="No Item" class="rounded" width="50" src="{{ asset('img/no-item.png') }}">
+                        {% else %}
+                            <img alt="{{ participant.stats.item4 }}" class="rounded" width="50"
+                                 src="{{ ddragon ~ lol_patch ~ '/img/item/' ~ participant.stats.item4 ~ '.png' }}">
+                        {% endif %}
+                        <!-- Item 5 -->
+                        {% if participant.stats.item5 == 0 %}
+                            <img alt="No Item" class="rounded" width="50" src="{{ asset('img/no-item.png') }}">
+                        {% else %}
+                            <img alt="{{ participant.stats.item5 }}" class="rounded" width="50"
+                                 src="{{ ddragon ~ lol_patch ~ '/img/item/' ~ participant.stats.item5 ~ '.png' }}">
+                        {% endif %}
+                        <!-- Item 6 -->
+                        {% if participant.stats.item6 == 0 %}
+                            <img alt="No Item" class="rounded" width="50" src="{{ asset('img/no-item.png') }}">
+                        {% else %}
+                            <img alt="{{ participant.stats.item6 }}" class="rounded" width="50"
+                                 src="{{ ddragon ~ lol_patch ~ '/img/item/' ~ participant.stats.item6 ~ '.png' }}">
+                        {% endif %}
+                        <br/>
+                        <div class="mt-2">
+                            {{ participant.stats.kills }}/{{ participant.stats.deaths }}/{{ participant.stats.assists }}<br/>
+                            {% set kda = (participant.stats.kills + participant.stats.assists) / ((participant.stats.deaths > 0)? participant.stats.deaths : 1) %}
+                            <span class="text-muted">KDA: {{ kda|number_format(2) }}</span>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="col">
+        <div class="row text-center">
+            <div class="col-12">
+                {% for i in 0..4 %}
+                    <img alt="{{ render(controller(
+                        'App\\Controller\\ChampionController::getChampionByKey',
+                        { 'server': server,'key': matchData.participants[i].championId }
+                    )) }}" src="{{ ddragon ~ lol_patch ~ '/img/champion/' ~  render(controller(
+                        'App\\Controller\\ChampionController::getChampionByKey',
+                        { 'server': server,'key': matchData.participants[i].championId }
+                    )) ~ '.png' }}" width="50px" class="rounded-circle img-fluid">
+                {% endfor %}
+            </div>
+            <div class="col-12"><span class="text-bold colored">VS.</span></div>
+            <div class="col-12">
+                {% for i in 5..9 %}
+                    <img alt="{{ render(controller(
+                        'App\\Controller\\ChampionController::getChampionByKey',
+                        { 'server': server,'key': matchData.participants[i].championId }
+                    )) }}" src="{{ ddragon ~ lol_patch ~ '/img/champion/' ~  render(controller(
+                        'App\\Controller\\ChampionController::getChampionByKey',
+                        { 'server': server,'key': matchData.participants[i].championId }
+                    )) ~ '.png' }}" width="50px" class="rounded-circle img-fluid">
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

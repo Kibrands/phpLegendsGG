@@ -89,7 +89,7 @@ class LegendsGGController extends AbstractController {
             LeagueAPI::SET_KEY => $_ENV['API_KEY'],
             LeagueAPI::SET_REGION => $utilController->getRegion($server),
         ]);
-        $summoner = $api->getSummonerByName($summoner);
+        $summonerObj = $api->getSummonerByName($summoner);
         // Borde
         $ranges = array(
             "1_29" => range(1, 29),
@@ -106,16 +106,16 @@ class LegendsGGController extends AbstractController {
         );
         $levelBorder = "1_29";
         foreach ($ranges as $key => $value) {
-            if (in_array($summoner->summonerLevel, $value)) {
+            if (in_array($summonerObj->summonerLevel, $value)) {
                 $levelBorder = $key;
-            } elseif ($summoner->summonerLevel >= 300) {
+            } elseif ($summonerObj->summonerLevel >= 300) {
                 $levelBorder = "300";
             }
         }
         // Busca ligas
-        $summonerLeagues = $api->getLeaguePositionsForSummoner($summoner->id);
+        $summonerLeagues = $api->getLeaguePositionsForSummoner($summonerObj->id);
         // Busca partidas
-        $matches = $api->getMatchlistByAccount($summoner->accountId);
+        $matches = $api->getMatchlistByAccount($summonerObj->accountId);
         if ($matches->totalGames > 20) {
             $matches->matches = array_slice($matches->matches, 0, 20);
         }
@@ -123,7 +123,7 @@ class LegendsGGController extends AbstractController {
         return $this->render('summoner.html.twig', [
                     'active' => '',
                     'server' => $server,
-                    'summoner' => $summoner,
+                    'summoner' => $summonerObj,
                     'lol_patch' => $_ENV['LOL_PATCH'],
                     'ddragon' => $_ENV['DDRAGON'],
                     'levelBorder' => $levelBorder,

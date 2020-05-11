@@ -47,22 +47,22 @@
                 </div>
             </div>
             {% for match in matches.matches %}
-                <div class="col-12 border border-dark shadow mt-1 bg-light">
+                <div class="col-12 border border-dark shadow mt-1 bg-light" id="{{ match.gameId }}">
                     <div class="py-3 h4" style="font-size: 1rem;">
                         <div class="row">
                             <div class="col-2">
                                 <img alt="{{ render(controller(
                                     'App\\Controller\\ChampionController::getChampionByKey',
-                                    { 'api': api,'key': match.champion }
+                                    { 'server': server,'key': match.champion }
                                 )) }}" src="{{ ddragon ~ lol_patch ~ '/img/champion/' ~  render(controller(
                                     'App\\Controller\\ChampionController::getChampionByKey',
-                                    { 'api': api,'key': match.champion }
+                                    { 'server': server,'key': match.champion }
                                 )) ~ '.png' }}" width="80px" >
                             </div>
-                            <div class="col-10">
+                            <div class="col-10 px-5">
                                 {{ render_hinclude(controller(
                                     'App\\Controller\\MatchController::getMatchData',
-                                    { 'server': server, 'matchId': match.gameId }
+                                    { 'server': server, 'matchId': match.gameId, 'accountId': summoner.accountId }
                                 )) }}
                             </div>
                         </div>
