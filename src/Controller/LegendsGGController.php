@@ -15,9 +15,46 @@ class LegendsGGController extends AbstractController {
         ]);
     }
 
-    function tier() {
-        return $this->render('tier.html.twig', [
-                    'active' => 'tier'
+    function versus() {
+        return $this->render('versus.html.twig', [
+                    'active' => 'versus'
+        ]);
+    }
+
+    function versusFind(Request $request) {
+        // Recogemos valores del formulario
+        $summoner1 = $request->request->get("summoner1");
+        $summoner2 = $request->request->get("summoner2");
+        $server = $request->request->get("server");
+        return $this->redirectToRoute('versus-action', [
+                    'server' => $server,
+                    'summoner1' => $summoner1,
+                    'summoner2' => $summoner2
+        ]);
+    }
+
+    function versusAction($server, $summoner1, $summoner2) {
+        $utilController = new UtilController();
+        $api = new LeagueAPI([
+            LeagueAPI::SET_KEY => $_ENV['API_KEY'],
+            LeagueAPI::SET_REGION => $utilController->getRegion($server),
+        ]);
+        // Summoners
+        $summonerObj1 = $api->getSummonerByName($summoner1);
+        $summonerObj2 = $api->getSummonerByName($summoner2);
+        // Leagues
+        $summoner1Leagues = $api->getLeaguePositionsForSummoner($summonerObj1->id);
+        $summoner2Leagues = $api->getLeaguePositionsForSummoner($summonerObj2->id);
+
+        return $this->render('versus/versusAction.html.twig', [
+                    'active' => 'versus',
+                    'server' => $server,
+                    'summoner1' => $summonerObj1,
+                    'summoner2' => $summonerObj2,
+                    'summoner1Leagues' => $summoner1Leagues,
+                    'summoner2Leagues' => $summoner2Leagues,
+                    'lol_patch' => $_ENV['LOL_PATCH'],
+                    'ddragon' => $_ENV['DDRAGON']
         ]);
     }
 
@@ -39,7 +76,7 @@ class LegendsGGController extends AbstractController {
         foreach ($finder as $file) {
             $news = json_decode(file_get_contents($file));
         }
-        
+
         return $this->render('lol-esports.html.twig', [
                     'active' => 'lol-esports',
                     'news' => $news

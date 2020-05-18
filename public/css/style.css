@@ -40,7 +40,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .main-container {
     margin-top: 5rem;
-    padding: 0 !important;
 }
 
 
@@ -587,4 +586,88 @@ footer div a:hover {
     width: 7rem;
     -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+
+/*********************************
+13. Versus
+*********************************/
+
+.rhombus {
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transition: clip-path 1s;
+}
+
+.octagon {
+    background-color: #333333;
+    width: 300px;
+    height: 300px;
+    -webkit-clip-path: polygon(0 0, 50% 25%, 100% 0, 75% 50%, 100% 100%, 50% 75%, 0 100%, 25% 50%);
+    clip-path: polygon(0 0, 50% 25%, 100% 0, 75% 50%, 100% 100%, 50% 75%, 0 100%, 25% 50%);
+    transition: clip-path 1s;
+}
+
+.polygon-wrapper {
+    width: 300px;
+    height: 300px;
+}
+@media (max-width:991px) {
+    .polygon-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+    .octagon{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width:768px) {
+    .polygon-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+    .octagon{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width:576px) {
+    .polygon-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+    .octagon{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.polygon-wrapper:hover .rhombus {
+    -webkit-clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+}
+
+.polygon-wrapper:hover .octagon {
+    clip-path: polygon(50% 25%, 100% 0, 75% 50%, 100% 100%, 50% 75%, 0 100%, 25% 50%, 0 0);
+    -webkit-clip-path: polygon(50% 25%, 100% 0, 75% 50%, 100% 100%, 50% 75%, 0 100%, 25% 50%, 0 0);
+}
+
+.lower-level {
+    font-weight: bold;
+    color: #800000 !important;
+}
+
+.greater-level {
+    font-weight: bold;
+    color: #218838 !important;
+}
+
+.same-level {
+    font-weight: bold;
+    color: #333 !important;
 }

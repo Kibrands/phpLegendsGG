@@ -2,9 +2,18 @@ index:
   path: /
   controller: App\Controller\LegendsGGController::index
 
-tier:
-  path: /tier
-  controller: App\Controller\LegendsGGController::tier
+versus:
+  path: /versus
+  controller: App\Controller\LegendsGGController::versus
+
+versus-find:
+  path: /vs
+  controller: App\Controller\LegendsGGController::versusFind
+  methods: ["POST"]
+
+versus-action:
+  path: /versus/{server}/{summoner1}/{summoner2}
+  controller: App\Controller\LegendsGGController::versusAction
 
 ranking:
   path: /ranking

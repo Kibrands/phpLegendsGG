@@ -1,0 +1,106 @@
+{# versus/versusAction.hmtl.twig #}
+{% extends "base.html.twig" %}
+{% block title %}{{ parent() ~ server|upper ~ ' | ' ~ summoner1.name ~ ' VS. ' ~ summoner2.name }}{% endblock %}
+{% block body %}
+    <div class="container main-container">
+        <div class="row">
+            <div class="col-12 col-sm-6 p-5 text-center bg-light border border-secondary shadow">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="{{ ddragon }}{{ lol_patch }}/img/profileicon/{{ summoner1.profileIconId }}.png"
+                             class="img img-fluid rounded rounded-circle w-100 profile-icon"
+                             alt="{{ summoner1.profileIconId }}"><br/>
+                        <h5>{{ summoner1.name }}</h5>
+                        <p>Lvl:
+                            {% if summoner1.summonerLevel < summoner2.summonerLevel %}
+                                <span class="lower-level">{{summoner1.summonerLevel }}</span>
+                            {% elseif summoner1.summonerLevel > summoner2.summonerLevel %}
+                                <span class="greater-level">{{summoner1.summonerLevel }}</span>
+                            {% else %}
+                                <span class="same-level">{{summoner1.summonerLevel }}</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="col-8">
+                        <div class="row">
+                            {% for league in summoner1Leagues %}
+                                <div class="col-12">
+                                    <img class="float-right" src="{{ asset('img/ranked-emblems/Emblem_' ~ league.tier|capitalize ~ '.png') }}"
+                                         width="120px">
+                                    <p class="text-right"><br/>
+                                        {% if league.queueType == 'RANKED_SOLO_5x5' %}
+                                            <b>Ranked Solo/Duo</b><br/>
+                                        {% elseif league.queueType == 'RANKED_FLEX_SR' %}
+                                            <b>Ranked Flex</b><br/>
+                                        {% endif %}
+                                        <b>{{ league.tier }} - {{ league.rank }}</b><br/>
+                                        <b>{{ league.leaguePoints }} LP</b><br/>
+                                        <span class="text-success"><i class="fas fa-check"></i> {{ league.wins }}</span> /
+                                        <span class="text-danger">{{ league.losses }} <i class="fas fa-times"></i></span><br/>
+                                    </p>
+                                </div>
+                            {% else %}
+                                <div class="col-12">
+                                    <img class="float-right" width="120px" src="{{ asset('img/ranked-emblems/Emblem_Unranked.png') }}" alt="Unranked">
+                                    <p class="text-right"><br/><b>Unranked</b></p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 p-5 text-center bg-light border border-secondary shadow">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="{{ ddragon }}{{ lol_patch }}/img/profileicon/{{ summoner2.profileIconId }}.png"
+                             class="img img-fluid rounded rounded-circle w-100 profile-icon"
+                             alt="{{ summoner2.profileIconId }}"><br/>
+                        <h5>{{ summoner2.name }}</h5>
+                        <p>Lvl:
+                            {% if summoner2.summonerLevel < summoner1.summonerLevel %}
+                                <span class="lower-level">{{summoner2.summonerLevel }}</span>
+                            {% elseif summoner2.summonerLevel > summoner1.summonerLevel %}
+                                <span class="greater-level">{{summoner2.summonerLevel }}</span>
+                            {% else %}
+                                <span class="same-level">{{summoner2.summonerLevel }}</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="col-8">
+                        <div class="row">
+                            {% for league in summoner2Leagues %}
+                                <div class="col-12">
+                                    <img class="float-right" src="{{ asset('img/ranked-emblems/Emblem_' ~ league.tier|capitalize ~ '.png') }}"
+                                         width="120px">
+                                    <p class="text-right"><br/>
+                                        {% if league.queueType == 'RANKED_SOLO_5x5' %}
+                                            <b>Ranked Solo/Duo</b><br/>
+                                        {% elseif league.queueType == 'RANKED_FLEX_SR' %}
+                                            <b>Ranked Flex</b><br/>
+                                        {% endif %}
+                                        <b>{{ league.tier }} - {{ league.rank }}</b><br/>
+                                        <b>{{ league.leaguePoints }} LP</b><br/>
+                                        <span class="text-success"><i class="fas fa-check"></i> {{ league.wins }}</span> /
+                                        <span class="text-danger">{{ league.losses }} <i class="fas fa-times"></i></span><br/>
+                                    </p>
+                                </div>
+                            {% else %}
+                                <div class="col-12">
+                                    <img class="float-right" width="120px" src="{{ asset('img/ranked-emblems/Emblem_Unranked.png') }}" alt="Unranked">
+                                    <p class="text-right"><br/><b>Unranked</b></p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 border border-dark shadow bg-light mt-3">
+                <div class="text-info py-3 h4 text-center">
+                    <i class="fas fa-wrench"></i> Estamos trabajando duro para traerte las mejores estadísticas.<br/>
+                    Ayúdanos a mejorar enviándonos tus ideas por <a target="_blank" href="https://twitter.com/LegendsGG_">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="push"></div>
+    </div>
+{% endblock %}

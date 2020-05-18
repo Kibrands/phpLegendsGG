@@ -1,0 +1,50 @@
+{# tier.html.twig #}
+{% extends "base.html.twig" %}
+{% block title %}{{ parent() }}Versus{% endblock %}
+{% block body %}
+    <div class="container-fluid main-container">
+        <div class="px-5 pt-5">
+            <form id="versus" action="{{ path('versus-find') }}" method="post">
+                <div class="row">
+                    <div class="col-12 mb-5">
+                        <select id="server" class="form-control" name="server" id="server">
+                            <option value="na" selected>NA</option>
+                            <option value="euw">EUW</option>
+                            <option value="eun">EUN</option>
+                            <option value="br">Brazil</option>
+                            <option value="lan">LAN</option>
+                            <option value="las">LAS</option>
+                            <option value="tr">Turkey</option>
+                            <option value="ru">Russia</option>
+                            <option value="oc">Oceania</option>
+                            <option value="jp">Japan</option>
+                            <option value="kr">Korea</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-4 p-5 m-auto text-center bg-light border border-secondary shadow">
+                        <p>Invocador 1</p>
+                        <input class="form-control" type="text" name="summoner1"
+                               id="summoner1" required placeholder="Invocador 1"
+                               required>
+                    </div>
+                    <div class="col-12 col-sm-4 my-5 text-center">
+                        <div class="polygon-wrapper m-auto">
+                            <div class="octagon shadow position-fixed">
+                            </div>
+                            <button type="submit" class="rhombus bg-secondary border border-secondary shadow m-auto">
+                                <div class="h3 text-white text-bold font-italic">VS.</div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 p-5 m-auto text-center bg-light border border-secondary shadow">
+                        <p>Invocador 2</p>
+                        <input class="form-control" type="text" name="summoner2"
+                               id="summoner2" required placeholder="Invocador 2"
+                               required>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="push"></div>
+    </div>
+{% endblock %}
