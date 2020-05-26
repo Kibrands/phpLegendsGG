@@ -1,6 +1,10 @@
 {# versus/versusAction.hmtl.twig #}
 {% extends "base.html.twig" %}
 {% block title %}{{ parent() ~ server|upper ~ ' | ' ~ summoner1.name ~ ' VS. ' ~ summoner2.name }}{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('vendors/circles/css/circle.css') }}">
+{% endblock %}
 {% block body %}
     <div class="container main-container">
         <div class="row">
@@ -25,19 +29,35 @@
                         <div class="row">
                             {% for league in summoner1Leagues %}
                                 <div class="col-12">
-                                    <img class="float-right" src="{{ asset('img/ranked-emblems/Emblem_' ~ league.tier|capitalize ~ '.png') }}"
-                                         width="120px">
-                                    <p class="text-right"><br/>
-                                        {% if league.queueType == 'RANKED_SOLO_5x5' %}
-                                            <b>Ranked Solo/Duo</b><br/>
-                                        {% elseif league.queueType == 'RANKED_FLEX_SR' %}
-                                            <b>Ranked Flex</b><br/>
-                                        {% endif %}
-                                        <b>{{ league.tier }} - {{ league.rank }}</b><br/>
-                                        <b>{{ league.leaguePoints }} LP</b><br/>
-                                        <span class="text-success"><i class="fas fa-check"></i> {{ league.wins }}</span> /
-                                        <span class="text-danger">{{ league.losses }} <i class="fas fa-times"></i></span><br/>
-                                    </p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="text-right"><br/>
+                                                {% if league.queueType == 'RANKED_SOLO_5x5' %}
+                                                    <b>Ranked Solo/Duo</b><br/>
+                                                {% elseif league.queueType == 'RANKED_FLEX_SR' %}
+                                                    <b>Ranked Flex</b><br/>
+                                                {% endif %}
+                                                <b>{{ league.tier }} - {{ league.rank }}</b><br/>
+                                                <b>{{ league.leaguePoints }} LP</b><br/>
+                                                <span class="text-success"><i class="fas fa-check"></i> {{ league.wins }}</span> /
+                                                <span class="text-danger">{{ league.losses }} <i class="fas fa-times"></i></span><br/>
+                                                {% set winrate1 = league.wins * 100 // (league.wins + league.losses) %}
+                                                <div class="float-right">
+                                                    <div class="c100 p{{ winrate1 }} small green {% if winrate1 < 50 %}red-rate{% endif %}">
+                                                        <span>{{ winrate1 }}%</span>
+                                                        <div class="slice">
+                                                            <div class="bar"></div>
+                                                            <div class="fill"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </p>
+                                        </div>
+                                        <div class="col align-self-center">
+                                            <img src="{{ asset('img/ranked-emblems/Emblem_' ~ league.tier|capitalize ~ '.png') }}"
+                                                 width="120px">
+                                        </div>
+                                    </div>
                                 </div>
                             {% else %}
                                 <div class="col-12">
@@ -70,19 +90,35 @@
                         <div class="row">
                             {% for league in summoner2Leagues %}
                                 <div class="col-12">
-                                    <img class="float-right" src="{{ asset('img/ranked-emblems/Emblem_' ~ league.tier|capitalize ~ '.png') }}"
-                                         width="120px">
-                                    <p class="text-right"><br/>
-                                        {% if league.queueType == 'RANKED_SOLO_5x5' %}
-                                            <b>Ranked Solo/Duo</b><br/>
-                                        {% elseif league.queueType == 'RANKED_FLEX_SR' %}
-                                            <b>Ranked Flex</b><br/>
-                                        {% endif %}
-                                        <b>{{ league.tier }} - {{ league.rank }}</b><br/>
-                                        <b>{{ league.leaguePoints }} LP</b><br/>
-                                        <span class="text-success"><i class="fas fa-check"></i> {{ league.wins }}</span> /
-                                        <span class="text-danger">{{ league.losses }} <i class="fas fa-times"></i></span><br/>
-                                    </p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="text-right"><br/>
+                                                {% if league.queueType == 'RANKED_SOLO_5x5' %}
+                                                    <b>Ranked Solo/Duo</b><br/>
+                                                {% elseif league.queueType == 'RANKED_FLEX_SR' %}
+                                                    <b>Ranked Flex</b><br/>
+                                                {% endif %}
+                                                <b>{{ league.tier }} - {{ league.rank }}</b><br/>
+                                                <b>{{ league.leaguePoints }} LP</b><br/>
+                                                <span class="text-success"><i class="fas fa-check"></i> {{ league.wins }}</span> /
+                                                <span class="text-danger">{{ league.losses }} <i class="fas fa-times"></i></span><br/>
+                                                <div class="float-right">
+                                                    {% set winrate2 = league.wins * 100 // (league.wins + league.losses) %}
+                                                    <div class="c100 p{{ winrate2 }} small green {% if winrate2 < 50 %}red-rate{% endif %}">
+                                                        <span>{{ winrate2 }}%</span>
+                                                        <div class="slice">
+                                                            <div class="bar"></div>
+                                                            <div class="fill"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </p>
+                                        </div>
+                                        <div class="col align-self-center">
+                                            <img src="{{ asset('img/ranked-emblems/Emblem_' ~ league.tier|capitalize ~ '.png') }}"
+                                                 width="120px">
+                                        </div>
+                                    </div>
                                 </div>
                             {% else %}
                                 <div class="col-12">
