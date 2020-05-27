@@ -17,7 +17,7 @@ use RiotAPI\LeagueAPI\Exceptions\DataNotFoundException;
 * @author Julio de la Matta Cadenas <juliomattacadenas@gmail.com>
 * @copyright 2020 Julio de la Matta Cadenas
 * @license http://www.fsf.org/licensing/licenses/gpl.txt GPL 2 or later
-* @version 2020-05-27
+* @version 1.1.0
 * @link https://github.com/Kibrands/phpLegendsGG
 */
 class LegendsGGController extends AbstractController {
