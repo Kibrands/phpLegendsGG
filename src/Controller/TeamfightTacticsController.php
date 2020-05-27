@@ -13,7 +13,13 @@ class TeamfightTacticsController extends AbstractController {
             LeagueAPI::SET_KEY => $_ENV['API_KEY'],
             LeagueAPI::SET_REGION => $utilController->getRegion($server),
         ]);
-        $tftLeague = $api->getTFTChallengerLeague();
+        try {
+            $tftLeague = $api->getTFTChallengerLeague();
+        } catch (ForbiddenException $ex) {
+            return $this->redirectToRoute('error', [
+                        'error' => $ex->getCode()
+            ]);
+        }
         // Ordena de mayor a menor y coge los 3 primeros
         usort($tftLeague->entries, function($a, $b) {
             if ($a->leaguePoints < $b->leaguePoints) {
@@ -31,5 +37,5 @@ class TeamfightTacticsController extends AbstractController {
         return $this->render('tft/tft-rankData.html.twig',
                         ['ranking' => $tftLeague]);
     }
-    
+
 }

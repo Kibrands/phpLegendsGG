@@ -13,8 +13,14 @@ class RankingController extends AbstractController {
             LeagueAPI::SET_KEY => $_ENV['API_KEY'],
             LeagueAPI::SET_REGION => $utilController->getRegion($server),
         ]);
-        $soloQ = $api->getLeagueChallenger('RANKED_SOLO_5x5');
-        $flex = $api->getLeagueChallenger('RANKED_FLEX_SR');
+        try {
+            $soloQ = $api->getLeagueChallenger('RANKED_SOLO_5x5');
+            $flex = $api->getLeagueChallenger('RANKED_FLEX_SR');
+        } catch (ForbiddenException $ex) {
+            return $this->redirectToRoute('error', [
+               'error' => $ex->getCode()
+            ]);
+        }
         // Ordena de mayor a menor y coge los 3 primeros
         usort($soloQ->entries, function($a, $b) {
             if ($a->leaguePoints < $b->leaguePoints) {

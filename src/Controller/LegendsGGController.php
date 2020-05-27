@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use RiotAPI\LeagueAPI\LeagueAPI;
 use Symfony\Component\Finder\Finder;
+use RiotAPI\LeagueAPI\Exceptions\ForbiddenException;
+use RiotAPI\LeagueAPI\Exceptions\DataNotFoundException;
 
 class LegendsGGController extends AbstractController {
 
@@ -39,12 +41,18 @@ class LegendsGGController extends AbstractController {
             LeagueAPI::SET_KEY => $_ENV['API_KEY'],
             LeagueAPI::SET_REGION => $utilController->getRegion($server),
         ]);
-        // Summoners
-        $summonerObj1 = $api->getSummonerByName($summoner1);
-        $summonerObj2 = $api->getSummonerByName($summoner2);
-        // Leagues
-        $summoner1Leagues = $api->getLeaguePositionsForSummoner($summonerObj1->id);
-        $summoner2Leagues = $api->getLeaguePositionsForSummoner($summonerObj2->id);
+        try {
+            // Summoners
+            $summonerObj1 = $api->getSummonerByName($summoner1);
+            $summonerObj2 = $api->getSummonerByName($summoner2);
+            // Leagues
+            $summoner1Leagues = $api->getLeaguePositionsForSummoner($summonerObj1->id);
+            $summoner2Leagues = $api->getLeaguePositionsForSummoner($summonerObj2->id);
+        } catch (ForbiddenException | DataNotFoundException $ex) {
+            return $this->redirectToRoute('error', [
+               'error' => $ex->getCode()
+            ]);
+        }
 
         return $this->render('versus/versusAction.html.twig', [
                     'active' => 'versus',
@@ -126,7 +134,13 @@ class LegendsGGController extends AbstractController {
             LeagueAPI::SET_KEY => $_ENV['API_KEY'],
             LeagueAPI::SET_REGION => $utilController->getRegion($server),
         ]);
-        $summonerObj = $api->getSummonerByName($summoner);
+        try {
+            $summonerObj = $api->getSummonerByName($summoner);
+        } catch (ForbiddenException | DataNotFoundException $ex) {
+            return $this->redirectToRoute('error', [
+               'error' => $ex->getCode()
+            ]);
+        }
         // Borde
         $ranges = array(
             "1_29" => range(1, 29),
@@ -172,15 +186,12 @@ class LegendsGGController extends AbstractController {
 
     function error($error) {
         // Error por defecto
-        $errorResponse = "Aquí no hay nada";
-        if ($error == 'err-server-not-valid') {
-            $errorResponse = "Servidor no válido";
+        $errorResponse = $error;
+        if ($error == '404') {
+            $errorResponse = 'No hemos encontrado lo que estabas buscando...';
         }
-        if ($error == 'err-summoner-not-found') {
-            $errorResponse = 'El invocador no existe';
-        }
-        if ($error == 'err-api-key') {
-            $errorResponse = 'La Api Key ha caducado, por favor, contacte con el dueño de la página';
+        if ($error == '403') {
+            $errorResponse = 'La Api Key ha caducado, por favor, contacte con el dueño de la página.';
         }
         return $this->render('error.html.twig', array(
                     'error' => $errorResponse,
