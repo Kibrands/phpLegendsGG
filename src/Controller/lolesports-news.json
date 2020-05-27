@@ -1,5 +1,23 @@
 [
     {
+        "title": "LEC Pop Quiz - Adivina el campeón",
+        "content": "https://www.youtube.com/embed/7aOvqm_1OPY?cc_load_policy=1&cc_lang_pref=es&hl=es",
+        "date": "2020-05-20",
+        "poster": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt1da04d2d5d281ade/5ec53e97177c51692beb1505/Thumbnail_Guess_the_Champion.jpg"
+    },
+	{
+        "title": "¡Jugadas pog del EU Masters! La semifinal y la final",
+        "content": "https://www.youtube.com/embed/uSIW2OgprKk?cc_load_policy=1&cc_lang_pref=es&hl=es",
+        "date": "2020-05-12",
+        "poster": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3b5bc983b69c70d5/5ebac063fa550001f72bc69e/EM_PogPlays_Thumbnail_10.jpg"
+    },
+	{
+        "title": "Locked In: Senna",
+        "content": "https://www.youtube.com/embed/P4SLhtv6wQA?cc_load_policy=1&cc_lang_pref=es&hl=es",
+        "date": "2020-05-06",
+        "poster": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt64579c2887bc2a5f/5eb3e3fe21a5027d7741fac3/Locked_In_-_Senna_Client_T2_No_Text.jpg"
+    },
+	{
         "title": "MVP de la primera LEC 2020",
         "content": "https://www.youtube.com/embed/AjajziDMgp4?cc_load_policy=1&cc_lang_pref=es&hl=es",
         "date": "2020-04-19",
