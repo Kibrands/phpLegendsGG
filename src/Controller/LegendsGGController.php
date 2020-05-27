@@ -9,6 +9,17 @@ use Symfony\Component\Finder\Finder;
 use RiotAPI\LeagueAPI\Exceptions\ForbiddenException;
 use RiotAPI\LeagueAPI\Exceptions\DataNotFoundException;
 
+/**
+* LegendsGGController
+*
+* Controlador principal de la aplicación web Legends GG.
+*
+* @author Julio de la Matta Cadenas <juliomattacadenas@gmail.com>
+* @copyright 2020 Julio de la Matta Cadenas
+* @license http://www.fsf.org/licensing/licenses/gpl.txt GPL 2 or later
+* @version 2020-05-27
+* @link https://github.com/Kibrands/phpLegendsGG
+*/
 class LegendsGGController extends AbstractController {
 
     function index() {
