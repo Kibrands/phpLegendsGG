@@ -46,7 +46,7 @@ class SubscriptionController extends AbstractController {
                 ));
             } else {
                 return $this->render('subscription/confirmed.html.twig', array(
-                    "message" => "Error, puede que ya estes suscrito al boletín.",
+                    "message" => "Error, puede que ya estés suscrito al boletín.",
                     "icon" => "times",
                     "active" => ""
                 ));

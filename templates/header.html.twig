@@ -4,7 +4,7 @@
 	<div class="container">
         <!-- Brand -->
         <a style="color:black" class="navbar-brand" href="{{ path('index') }}">
-            <span class="logo"><img src="{{ asset('/img/icon.png') }}"></span>Legends GG
+            <span class="logo"><img src="{{ asset('/img/icon.png') }}" alt="Legends GG"></span>Legends GG
         </a>
 
         <!-- Toggler/collapsibe Button -->
@@ -27,7 +27,7 @@
             <!-- Dropdown -->
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle {% if active == 'tft' %}active-link{% endif %}" href="#" id="navbardrop" data-toggle="dropdown">
-                TFT <img class="tft-logo" src="{{ asset("/img/tft.png") }}">
+                TFT <img class="tft-logo" src="{{ asset("/img/tft.png") }}" alt="TFT">
             </a>
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="{{ path('tft-items') }}">Objetos</a>
